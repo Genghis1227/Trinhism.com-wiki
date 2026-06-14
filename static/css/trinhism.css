@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  /* Light Mode Variables */
+  --bg-color: #f7f9fa;
+  --bg-pattern: 
+      linear-gradient(to right, rgba(0, 150, 180, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 150, 180, 0.04) 1px, transparent 1px);
+  --text-color: #1a202c;
+  --text-muted: #718096;
+  --primary-color: #007788;
+  --primary-glow: rgba(0, 119, 136, 0.15);
+  --surface-color: #ffffff;
+  --border-color: #e2e8f0;
+  --sidebar-bg: #f7fafc;
+  --sidebar-active-bg: #edf2f7;
+  --header-bg: #1a202c;
+  --header-text: #ffffff;
+  --hover-bg: #edf2f7;
+  --code-bg: #edf2f7;
+  --code-color: #c53030;
+  --link-color: #007788;
+}
+
+html.dark {
+  /* Dark Mode Variables (matching trinhism.com) */
+  --bg-color: #050505;
+  --bg-pattern: 
+      linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+  --text-color: #ffffff;
+  --text-muted: #a0aec0;
+  --primary-color: #00f0ff; /* Neon Blue */
+  --primary-glow: rgba(0, 240, 255, 0.15);
+  --surface-color: #121212;
+  --border-color: rgba(255, 255, 255, 0.06);
+  --sidebar-bg: #121212;
+  --sidebar-active-bg: rgba(255, 255, 255, 0.05);
+  --header-bg: #050505;
+  --header-text: #ffffff;
+  --hover-bg: rgba(255, 255, 255, 0.06);
+  --code-bg: #181818;
+  --code-color: #ff8080;
+  --link-color: #00f0ff;
+}
+
+/* Core Layout Styles Override */
+body {
+  background-color: var(--bg-color) !important;
+  background-image: var(--bg-pattern) !important;
+  background-size: 40px 40px !important;
+  color: var(--text-color) !important;
+  font-family: 'Inter', sans-serif !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Override */
+header {
+  background-color: var(--header-bg) !important;
+  color: var(--header-text) !important;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header:after {
+  display: none !important; /* Hide default ribbon image */
+}
+
+header .logo a.baselink {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700;
+  color: var(--header-text) !important;
+  letter-spacing: -0.05em;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+/* Sidebar Override */
+article > aside {
+  background-color: var(--sidebar-bg) !important;
+  border-right: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+article > aside .menu .dd-item div a {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 500;
+  color: var(--text-color) !important;
+  transition: all 0.2s ease;
+}
+
+article > aside .menu .dd-item div a:hover,
+article > aside .menu .dd-item div a:focus {
+  background-color: var(--hover-bg) !important;
+  color: var(--primary-color) !important;
+}
+
+article > aside .menu .dd-item.active > div {
+  background-color: var(--sidebar-active-bg) !important;
+  border-left: 3px solid var(--primary-color);
+}
+
+article > aside .menu .dd-item.active > div * {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  border-bottom: none !important; /* Remove red dotted border */
+}
+
+/* Page Typography */
+article section.page {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+}
+
+article section.page h1:first-of-type,
+article section.page h1,
+article section.page h2,
+article section.page h3,
+article section.page h4 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  letter-spacing: -0.03em;
+}
+
+article section.page h1:first-of-type {
+  text-align: left !important;
+  text-transform: none !important;
+  font-size: 2.75rem !important;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Links & Text */
+section a {
+  color: var(--link-color) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+section a:hover {
+  color: var(--primary-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Table overrides */
+article section.page table {
+  background: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+article section.page table th {
+  background: var(--hover-bg) !important;
+  color: var(--text-color) !important;
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+article section.page table td {
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Code & Preblocks styling */
+article section.page code {
+  font-family: 'RobotoMono', monospace !important;
+  background-color: var(--code-bg) !important;
+  color: var(--code-color) !important;
+  border: 1px solid var(--border-color);
+}
+
+article section.page pre {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  color: var(--text-color) !important;
+}
+
+/* Search Box override */
+.searchbox {
+  background: transparent !important;
+}
+
+.searchbox input {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  font-family: 'Inter', sans-serif !important;
+  width: 90% !important;
+  transition: all 0.2s ease !important;
+}
+
+.searchbox input:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 10px var(--primary-glow) !important;
+  outline: none !important;
+}
+
+/* Next / Prev Navigation buttons */
+#navigation {
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+#navigation a {
+  color: var(--text-muted) !important;
+  transition: all 0.2s ease;
+}
+
+#navigation a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Theme Switcher Button styling */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-glow);
+  color: var(--primary-color);
+  background-color: var(--hover-bg);
+}
+
+.theme-toggle-btn i {
+  font-size: 14px;
+}
+
+/* Adjust layout margins for footer */
+footer {
+  border-top: 1px solid var(--border-color) !important;
+  color: var(--text-muted) !important;
+  transition: border-color 0.3s ease;
+}

@@ -8,6 +8,11 @@
     <div id="header">
       {{ partial "header.html" . }}
     </div>
+    <div class="theme-toggle-container" style="padding: 0.5rem 1rem; text-align: center;">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <i class="fa fa-moon-o"></i> <span>Dark</span>
+      </button>
+    </div>
     {{- if not .Site.Params.disableSearch}}
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
