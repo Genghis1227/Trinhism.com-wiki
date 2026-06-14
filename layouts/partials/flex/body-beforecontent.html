@@ -24,8 +24,8 @@
   <aside>
     <ul class="menu">
       {{- if not .Site.Params.disableHomeIcon}}
-          <li data-nav-id="{{"/" | relLangURL}}" class="dd-item">
-          <a href="{{"/" | relLangURL}}">
+          <li data-nav-id="{{ .Site.Home.RelPermalink }}" class="dd-item">
+          <a href="{{ .Site.Home.RelPermalink }}">
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
