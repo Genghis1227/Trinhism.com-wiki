@@ -72,7 +72,7 @@
       {{ if $File }}
       {{with $File.Path }}
     <div id="top-github-link">
-      <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+      <a class="github-link" href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" | strings.TrimPrefix "/" }}{{ $File.LogicalName }}" target="blank">
         <i class="fa fa-code-fork"></i>
         {{T "Edit-this-page"}}
       </a>
@@ -106,7 +106,7 @@
 {{if .Params.tags }}
   <div id="tags">
     {{ range $index, $tag := .Params.tags }}
-      <a class="label label-default" href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}">{{ $tag }}</a>
+      <a class="label label-default" href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
     {{ end }}
   </div>
 {{end}}
