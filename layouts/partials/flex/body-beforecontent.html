@@ -1,26 +1,24 @@
-<header>
-  <div class="logo">
-    {{ partial "header.html" . }}
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; height: 3.5rem; background-color: var(--header-bg) !important; border-bottom: 1px solid var(--border-color); position: fixed; top: 0; left: 0; right: 0; z-index: 100;">
+  <!-- Left/Center brand block -->
+  <div style="display: flex; align-items: center; gap: 1rem; flex-grow: 1;">
+    <!-- Hamburger button (visible always) -->
+    <div class="burger" style="display: block !important; margin: 0;">
+      <a href="javascript:void(0);" style="font-size: 20px; color: var(--text-color); text-decoration: none;">&#9776;</a>
+    </div>
+    
+    <!-- Logo with Back to Trinhism link -->
+    <a href="https://trinhism.com/" class="back-to-trinhism" style="display: flex; align-items: center; gap: 8px; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-color);">
+      <img src="https://trinhism.com/assets/apple-touch-icon.png" alt="Trinhism Logo" style="width: 22px; height: 22px; border-radius: 4px; box-shadow: 0 0 10px rgba(0, 240, 255, 0.3); object-fit: contain;" />
+      <span style="font-size: 14px; letter-spacing: -0.01em; color: var(--text-color); font-family: 'Space Grotesk', sans-serif;">&larr; Back to Trinhism</span>
+    </a>
   </div>
-  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
-  
-  <div class="theme-toggle-container" style="margin-left: 1.5rem; display: flex; align-items: center;">
+
+  <!-- Right side controls (Theme Toggle) -->
+  <div class="theme-toggle-container" style="display: flex; align-items: center; gap: 1rem;">
     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
       <i class="fa fa-moon-o"></i> <span>Dark</span>
     </button>
   </div>
-
-  {{- with .Site.Menus.shortcuts}}
-    <nav class="shortcuts">
-        {{- range sort . "Weight"}}
-            <li class="" role="">
-                <a href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
-                  {{safeHTML .Name}}
-                </a>
-            </li>
-        {{- end}}
-    </nav>
-  {{- end}}
 </header>
 <article>
   <aside>
