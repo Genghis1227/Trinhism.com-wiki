@@ -1,9 +1,9 @@
 +++
-title = "QuickCatch App Specs"
+title = "QuickCatch"
 type = "docdock"
 weight = 10
 +++
 
-# QuickCatch App Specs
+# QuickCatch
 
 This section contains the specifications and technical details for the QuickCatch application.

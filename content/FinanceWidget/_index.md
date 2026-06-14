@@ -1,9 +1,9 @@
 +++
-title = "FinanceWidget App Specs"
+title = "FinanceWidget"
 type = "docdock"
 weight = 20
 +++
 
-# FinanceWidget App Specs
+# FinanceWidget
 
 This section contains the specifications and technical details for the FinanceWidget application.
