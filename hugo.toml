@@ -1,0 +1,10 @@
+baseURL = "https://trinhism.com/wiki/"
+locale = "en-us"
+title = "Trinhism Wiki"
+theme = "hugo-theme-docdock"
+
+[params]
+editURL = "https://github.com/Genghis1227/Trinhism.com-wiki/edit/main/content/"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
