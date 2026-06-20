@@ -18,7 +18,7 @@ Before installing and setting up QuickCatch, ensure you meet the following requi
 *   **Active YNAB Account**: A configured budget with at least one active checking, cash, or credit card account.
 *   **Notification Access**: A device configured to show financial transaction alerts in the system tray (alerts from apps like Chase, Citi, Venmo, Zelle, Cash App, etc.).
 *   **Gmail Integration (Optional)**: Access to the Google Account linked to your bank emails if you wish to run instant background parsing for email notifications.
-*   **YNAB Personal Access Token or OAuth Sign-In**: Used to securely connect the app to the official YNAB API.
+*   **YNAB OAuth Sign-In**: Used to securely connect the app to the official YNAB API.
 
 ---
 
@@ -38,7 +38,7 @@ Upon launching QuickCatch for the first time, you will be prompted with a guided
 2.  **Battery Optimization Bypass**: Grant permission to run unrestricted in the background. This ensures Android does not terminate the sync service to save battery.
 
 ### Step 3: Connect to YNAB
-QuickCatch integrates with YNAB using a secure OAuth 2.0 flow or direct token authorization.
+QuickCatch integrates with YNAB using a secure OAuth 2.0 flow.
 1.  Navigate to **Settings** > **YNAB Connection**.
 2.  Tap **Authorize YNAB Account** to open the secure authorization page.
 3.  Log in with your YNAB credentials and click **Authorize** (the redirect scheme `quickcatch://` will return you back to the app).
