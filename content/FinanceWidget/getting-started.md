@@ -6,7 +6,7 @@ weight = 10
 
 # Getting Started with FinanceWidget
 
-**FinanceWidget** is a lightweight, borderless Windows desktop widget manager that displays clean, real-time stock, ETF, and portfolio charts powered by Google Finance. It provides a visual, at-a-glance dashboard directly on your home screen to track your favorite financial assets, market trends, and personal portfolios.
+**FinanceWidget** is a lightweight, borderless Windows desktop widget manager that displays clean, real-time stock, ETF, and market index charts powered by Google Finance. It provides a visual, at-a-glance dashboard directly on your home screen to track your favorite financial assets and market trends.
 
 ---
 
@@ -16,7 +16,7 @@ To run FinanceWidget and configure your visual trackers, ensure you have:
 
 *   **Operating System**: Windows 10 or Windows 11 (x64 architecture).
 *   **System WebView2**: [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) installed (pre-installed on Windows 11 and up-to-date Windows 10 devices).
-*   **Google Account**: Required if you wish to sync custom Google Finance watchlists and personal portfolios.
+*   **Google Account (Optional)**: Recommended for logging in to optimize layout rendering stability when using the Google Finance Beta Site.
 *   **Google Finance Format Tickers**: Tickers must be entered in the exchange-prepended format (e.g. `SCHD:NYSEARCA` or `JEPQ:NASDAQ`).
 
 ---

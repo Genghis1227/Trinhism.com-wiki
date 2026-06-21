@@ -23,15 +23,15 @@ For a minimalist look that sits quietly on your desktop background:
 
 ---
 
-## 🔄 Syncing Portfolios & Watchlists
+## 🔄 Google Sign-In & Beta Site Layout Optimization
 
-By combining **Google Account Sign-In** with FinanceWidget's WebView2 sandbox, you can display custom portfolios and watchlists directly on your desktop.
+By combining **Google Account Sign-In** with FinanceWidget's WebView2 sandbox, you can authenticate your Google session to enable a much better layout rendering on the Google Finance Beta Site.
 
-### 1. Connecting Your Google Account
+### Connecting Your Google Account
 1.  Right-click any open widget and select **Login to Google**.
 2.  Follow the standard prompts to log in securely.
-3.  Once authenticated, right-click the widget again and select **Return to Finance** to display your customized watchlists and synchronized portfolios.
-4.  Your sign-in status persists across application restarts.
+3.  Once authenticated, right-click the widget again and select **Return to Finance**. The widget will resume rendering the chart using your logged-in Google session cookies.
+4.  Your sign-in status and cookies persist across application restarts, ensuring a stable layout representation.
 
 ---
 
