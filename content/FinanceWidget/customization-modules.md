@@ -23,44 +23,30 @@ For a minimalist look that sits quietly on your desktop background:
 
 ---
 
-## 🔄 Switching Between Dividend and Debt Tracking Views
+## 🔄 Syncing Portfolios & Watchlists
 
-By combining **Google Account Sign-In** with Google Finance’s native portfolio feature, you can toggle your desktop widgets between dividend-growth tracking and debt-reduction progress bars.
+By combining **Google Account Sign-In** with FinanceWidget's WebView2 sandbox, you can display custom portfolios and watchlists directly on your desktop.
 
-### 1. Setting up the Dividend Income View
-To track your passive income assets:
-1.  Open your browser and navigate to [Google Finance Portfolios](https://www.google.com/finance/portfolios).
-2.  Create a portfolio named **"Dividend Income"**. Add your high-yield holdings (e.g. `SCHD`, `O`, `JEPQ`, `VYM`).
-3.  Open FinanceWidget, right-click any widget, and select **Login to Google**. Follow the prompts to authenticate.
-4.  Once logged in, right-click and click **Return to Finance**. Navigate to your custom "Dividend Income" portfolio.
-5.  The widget will automatically strip the headers and render your portfolio's total valuation chart, daily dividend-asset growth, and individual ticker performance.
-
-### 2. Setting up the Debt Snowball Progress Bar
-To visualize your debt payoff progress:
-1.  In Google Finance, create a portfolio named **"Debt Snowball"**.
-2.  To track a debt paydown progress bar visually, add custom "short" positions or negative equity values representing your remaining loans (e.g., tracking a baseline index representing the principal balance).
-3.  Link your cash payoff accounts as "holdings" to represent your cash reserves.
-4.  Load this custom "Debt Snowball" portfolio inside a dedicated widget. The chart will visually reflect your progress: as your cash reserves grow and your liabilities decrease, the overall portfolio line will rise, illustrating your snowball acceleration.
+### 1. Connecting Your Google Account
+1.  Right-click any open widget and select **Login to Google**.
+2.  Follow the standard prompts to log in securely.
+3.  Once authenticated, right-click the widget again and select **Return to Finance** to display your customized watchlists and synchronized portfolios.
+4.  Your sign-in status persists across application restarts.
 
 ---
 
-## 📊 Integrating Data Sources & Portfolios
+## 📊 Adding Ticker Symbols & Data Sources
 
-Google Finance serves as the primary data aggregator for FinanceWidget. You can configure your data inputs in two ways:
+FinanceWidget allows you to deploy independent stock, ETF, index, or cryptocurrency trackers.
 
-### Method A: Manual Ticker Formatting (Standard API)
-Add standalone asset tracking widgets directly from the app interface:
-1.  Right-click the widget context menu and click **Add New Widget** (or select **Add New Widget** from the system tray).
-2.  Enter the ticker following the syntax: `TICKER:EXCHANGE`.
-    *   *U.S. Stocks*: `AAPL:NASDAQ` or `MSFT:NASDAQ`
-    *   *Cryptocurrency*: `BTC-USD` or `ETH-USD`
-    *   *Mutual Funds/Index Funds*: `VFIAX:MUTF`
-    *   *Global Indices*: `.INX:INDEXSP` (S&P 500) or `.DJI:INDEXDJX` (Dow Jones)
+### Manual Ticker Formatting
+When adding a new widget from the system tray or widget context menu, type the symbol in the exchange-prepended format: `TICKER:EXCHANGE`.
+*   *U.S. Stocks*: `AAPL:NASDAQ` or `MSFT:NASDAQ`
+*   *ETFs*: `SPY:NYSEARCA` or `QQQ:NASDAQ`
+*   *Cryptocurrency*: `BTC-USD` or `ETH-USD`
+*   *Mutual Funds*: `VFIAX:MUTF`
+*   *Market Indices*: `.INX:INDEXSP` (S&P 500) or `.DJI:INDEXDJX` (Dow Jones)
 
-### Method B: Google Finance Portfolio Import (CSV Sync)
-To import large quantities of historical dividend data or debt payoffs:
-1.  Go to the [Google Finance Web Portal](https://www.google.com/finance/) in your primary browser.
-2.  Under your custom Portfolio, click the **Three Dots Menu** next to the portfolio title.
-3.  Select **Bulk Edit Holdings** or **Import Transactions**.
-4.  Upload your transaction spreadsheet in CSV format containing the column headers: `Ticker, Exchange, Shares, Purchase Price, Date`.
-5.  Once imported, log into Google inside FinanceWidget. The changes will populate across all synced widgets instantly.
+> [!TIP]
+> To find the exact ticker symbol syntax, open [Google Finance](https://www.google.com/finance/) in your web browser, search for the asset, and copy the final path segment from the URL (e.g. `https://www.google.com/finance/quote/NVDA:NASDAQ` -> use `NVDA:NASDAQ`).
+

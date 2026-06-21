@@ -6,7 +6,7 @@ weight = 10
 
 # Getting Started with FinanceWidget
 
-**FinanceWidget** is a lightweight, borderless Windows desktop widget manager that displays clean, real-time stock, ETF, and portfolio charts powered by Google Finance. It provides a visual, at-a-glance dashboard directly on your home screen to track dividend-growth portfolios (e.g., SCHD, JEPQ), passive income metrics, and visual investment targets.
+**FinanceWidget** is a lightweight, borderless Windows desktop widget manager that displays clean, real-time stock, ETF, and portfolio charts powered by Google Finance. It provides a visual, at-a-glance dashboard directly on your home screen to track your favorite financial assets, market trends, and personal portfolios.
 
 ---
 
@@ -16,7 +16,7 @@ To run FinanceWidget and configure your visual trackers, ensure you have:
 
 *   **Operating System**: Windows 10 or Windows 11 (x64 architecture).
 *   **System WebView2**: [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) installed (pre-installed on Windows 11 and up-to-date Windows 10 devices).
-*   **Google Account**: Required if you wish to sync custom Google Finance watchlists and track personal dividend portfolios or investment values.
+*   **Google Account**: Required if you wish to sync custom Google Finance watchlists and personal portfolios.
 *   **Google Finance Format Tickers**: Tickers must be entered in the exchange-prepended format (e.g. `SCHD:NYSEARCA` or `JEPQ:NASDAQ`).
 
 ---
@@ -42,9 +42,9 @@ FinanceWidget runs as a lightweight daemon in the background to keep your taskba
 1.  Right-click the system tray icon and select **Add New Widget**.
 2.  An elegant ticker entry dialog will appear.
 3.  Enter a ticker symbol of your choice.
-    *   *Example (Dividend growth)*: `SCHD:NYSEARCA` (Schwab U.S. Dividend Equity ETF)
-    *   *Example (Tech Income)*: `JEPQ:NASDAQ` (JPMorgan Nasdaq Equity Premium Income ETF)
-    *   *Example (Real Estate)*: `O:NYSE` (Realty Income Corp)
+    *   *Example (Stocks)*: `AAPL:NASDAQ` (Apple Inc.)
+    *   *Example (ETFs)*: `SPY:NYSEARCA` (SPDR S&P 500 ETF Trust)
+    *   *Example (Indices)*: `.INX:INDEXSP` (S&P 500 Index)
 4.  Click **Add** or press **Enter**. A borderless widget containing the Google Finance chart will appear on your desktop.
 
 ### Step 4: Position and Configure the View

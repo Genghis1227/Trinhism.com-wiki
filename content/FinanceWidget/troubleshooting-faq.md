@@ -27,7 +27,7 @@ FinanceWidget is designed as a lightweight client and has some structural bounda
 
 *   **Delayed Ticker Data**: Stock and ETF price feeds are subject to Google Finance's standard exchange delays (typically 15 minutes for minor exchanges, though major indices like NASDAQ, NYSE, and Forex remain real-time).
 *   **Manual Google Login Requirement**: Because security cookies are sandboxed locally inside the WebView2 folder, you must manually log in to Google on at least one widget instance when setting up the app for the first time.
-*   **No Auto-Compounding Debt Calculator**: The app displays raw equity values and asset progress. It does *not* contain an internal loan amortization or debt snowball mathematical calculator; you must model these metrics inside your synced Google watchlists or portfolios.
+*   **No Custom Calculations**: The app only displays stock prices and charts directly from Google Finance. It does not perform custom calculation overlays, compound interest projections, or portfolio yield analytics.
 *   **No Multi-Monitor Auto-Scaling**: High-DPI scaling conflicts can sometimes occur if widgets are moved between monitors with highly mismatched scaling factors (e.g., a 100% 1080p screen and a 200% 4K screen). If a graph becomes blurry, reload the widget to force scaling recalculation.
 
 ---
