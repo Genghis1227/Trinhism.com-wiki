@@ -32,4 +32,8 @@ Use the sidebar navigation or the quick links below to explore the documentation
 ---
 
 ## ✉️ Support & Inquiries
-For technical support, reporting bug behaviors, or requesting additional bank whitelists, contact the administrator directly at **support [at] trinhism.com** or open an issue on the respective repository dashboard.
+For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
+*   **QuickCatch Inquiries**: **quickcatch [at] trinhism.com**
+*   **FinanceWidget Inquiries**: **support [at] trinhism.com**
+
+Alternatively, you may open an issue directly on the respective application's repository dashboard.
