@@ -32,7 +32,7 @@ Use the sidebar navigation or the quick links below to explore the documentation
 ---
 
 ## ✉️ Support & Inquiries
-For technical support, reporting bug behaviors, or requesting additional bank whitelists, contact the administrator directly at **support@trinhism.com** or open an issue on the respective repository dashboard.
+For technical support, reporting bug behaviors, or requesting additional bank whitelists, contact the administrator directly at **support [at] trinhism.com** or open an issue on the respective repository dashboard.
 
 ---
 
