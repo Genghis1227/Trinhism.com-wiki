@@ -44,6 +44,17 @@ QuickCatch operates as a background system integration tool. Instead of waiting 
     *   *Tier 1 (Out-of-the-Box Whitelist)*: Pre-configured, verified packages like Venmo (`com.venmo`) or Citi (`com.citi.citimobile`).
     *   *Tier 2 (DNA Check)*: Unknown applications analyzed for transaction keywords (e.g. `charged`, `spent`, `withdrawn`, currency symbols).
     *   *Tier 3 (User Whitelist)*: Custom apps that you have manually verified and trusted.
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/VerifySourceButton.JPEG" alt="Verify Source Notification Banner" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">1. Verify Source Option</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/TrustSource.JPEG" alt="Trust Source Confirmation Dialog" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">2. Trust Source Settings Dialog</p>
+  </div>
+</div>
 *   **Target Budget**: The specific YNAB budget file (UUID) selected inside QuickCatch settings where caught transactions will be created.
 *   **Token Authentication**: The secure process of validating YNAB API access using an **OAuth 2.0 Access Token** without requiring you to share your primary YNAB login credentials.
 
@@ -51,7 +62,7 @@ QuickCatch operates as a background system integration tool. Instead of waiting 
 
 ## 🔑 YNAB Connection Guide
 
-QuickCatch uses the official **YNAB API** to sync transactions. Follow these steps to secure and authenticate the connection:
+QuickCatch uses the official [YNAB API](https://api.ynab.com/) to sync transactions. Follow these steps to secure and authenticate the connection:
 
 1.  Open the QuickCatch application and navigate to **Settings** > **YNAB Connection**.
 2.  Tap **Connect to YNAB**.

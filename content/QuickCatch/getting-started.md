@@ -24,28 +24,129 @@ Before installing and setting up QuickCatch, ensure you meet the following requi
 
 ## 🚀 Quick Start Guide
 
-Follow these four simple steps to get QuickCatch up and running on your Android device:
+Follow these steps to get QuickCatch fully configured and integrated on your Android device:
 
-### Step 1: Install the Application
-Download and install the **QuickCatch** package (`com.trinhism.quickcatch`) onto your Android device. 
+### Step 1: Install & Onboarding
+1. Download and install the **QuickCatch** package (`com.trinhism.quickcatch`) from the [Google Play Store](https://play.google.com/store/apps/details?id=com.trinhism.quickcatch) onto your Android device.
+2. Upon launching the application for the first time, read and accept the **Terms of Service (TOS)**.
+3. You will be greeted by the **Welcome Screen** introducing you to the real-time syncing flow.
+4. Follow the initial **Getting Started Checklist** that guides you through establishing permissions and connecting account integrations.
 
-### Step 2: Grant Permissions
-Upon launching QuickCatch for the first time, you will be prompted with a guided onboarding wizard:
-1.  **Notification Listener Permission**: Tap **Grant Permission** to be taken to Android's system settings. Locate **QuickCatch** in the list and toggle it **ON**. This allows the background parser to catch financial notification alerts.
-2.  **Battery Optimization Bypass**: Grant permission to run unrestricted in the background. This ensures Android does not terminate the sync service to save battery.
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/01-TOS.JPEG" alt="Terms of Service" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">1. Terms of Service</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/02-WelcomeScreen.JPEG" alt="Welcome Screen" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">2. Welcome Screen</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/03-GettingStarted.JPEG" alt="Getting Started Checklist" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">3. Onboarding Checklist</p>
+  </div>
+</div>
+
+---
+
+### Step 2: Grant Permissions & Notification Access
+QuickCatch runs in the background to capture transaction alerts. For this, it requires two system-level configurations:
+
+1. **Setup Connectivity**: View your connectivity status via the onboarding list and tap **Grant Permissions**.
+2. **Notification Listener Authorization**: Follow the system settings redirection:
+   * Select **QuickCatch** from the Device & App Notifications list.
+   * Toggle **Allow notification access** to **ON**.
+   * Confirm the system prompt by tapping **Allow** to enable reading notification payloads.
+3. **Battery Optimization Bypass**: Grant permission to run unrestricted in the background so Android does not put the listener service to sleep.
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <div style="max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/04-SetupConnectivity.JPEG" alt="Setup Connectivity Checklist" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Connectivity Setup List</p>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/07-NotifiicationAccessScreen.JPEG" alt="Notification Access List" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">1. Settings List</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/08-NotificationSetting.JPEG" alt="Device Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">2. Notification Settings</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/09-FindQuickCatchNotificationBottom.JPEG" alt="Locate QuickCatch" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">3. Scroll to QuickCatch</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/10-ToggleNotifiicationAccess.JPEG" alt="Toggle On" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">4. Toggle Access ON</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/11-NotificationAllowAccessScreen.JPEG" alt="Allow Access" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">5. Allow Permissions</p>
+  </div>
+</div>
+
+---
 
 ### Step 3: Connect to YNAB
-QuickCatch integrates with YNAB using a secure OAuth 2.0 flow.
-1.  Navigate to **Settings** > **YNAB Connection**.
-2.  Tap **Authorize YNAB Account** to open the secure authorization page.
-3.  Log in with your YNAB credentials and click **Authorize** (the redirect scheme `quickcatch://` will return you back to the app).
-4.  Select your **Target Budget** and map your local banks to their corresponding YNAB accounts.
+QuickCatch secure-syncs transactions directly to the official YNAB API.
+1. Navigate to **Settings** > **YNAB Connection** in the app.
+2. Tap **Authorize YNAB Account** to open the secure authorization browser page.
+3. Log in with your YNAB credentials and click **Authorize**. QuickCatch will automatically store the secure credentials and redirect back.
+4. Select your **Target Budget** and map your local parsed bank alerts to their corresponding YNAB checking or card accounts.
 
-### Step 4: Capture Your First Transaction
-To verify your setup is complete:
-1.  Make a small purchase or send a test transaction via a payment service like Venmo or PayPal.
-2.  Once the notification banner appears in your Android status bar, QuickCatch will immediately parse the merchant name, date, and amount.
-3.  Tap the push notification generated by QuickCatch to review, verify, and instantly upload the transaction to your YNAB ledger!
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/05-YNABLoginScreen.JPEG" alt="YNAB Login Authorization" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">YNAB Authorization Portal</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/12-AccountMapping.JPEG" alt="YNAB Account Mapping" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Budget Account Mapping</p>
+  </div>
+</div>
+
+---
+
+### Step 3b (Optional): Connect Gmail Parser
+If you wish to capture transaction alerts sent directly via email:
+1. Under settings, select **Google Account Login**.
+2. Perform Google OAuth login to authorize read-only access to transaction emails.
+3. The email parser will scan incoming mail from verified banks in real-time.
+
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <div style="max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/GettingStarted/06-GmailLogin.JPEG" alt="Gmail / Google OAuth Login" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Gmail Account Integration</p>
+  </div>
+</div>
+
+---
+
+### Step 4: Capture & Verify Your First Transaction
+To test your setup:
+1. Make a small purchase or trigger a notification from a payments app.
+2. Tap the push notification generated by QuickCatch to review the transaction details in the list.
+3. In the transaction list, you can edit the **Payee name**, adjust **Category mapping**, and select the **Account** before uploading to YNAB.
+4. Tap upload to instantly sync the cleared entry into your budget ledger!
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/MainScreen.JPEG" alt="QuickCatch Main Screen" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Pending Transactions List</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/EditPayee.JPEG" alt="Editing Payee Details" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Editing Payee Info</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 260px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/SelectCategory.JPEG" alt="Selecting YNAB Category" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Selecting Budget Category</p>
+  </div>
+</div>
 
 > [!TIP]
-> You can also simulate notifications or test connection latency by choosing the **Run Diagnostic Test** option in the app's troubleshooting settings menu.
+> To test the notification parser and simulate transaction alerts safely without real credentials, perform a **Full App Reset** in the maintenance tools panel, launch the app in **Demo Mode**, and tap the **Simulate Bank Alert** button.

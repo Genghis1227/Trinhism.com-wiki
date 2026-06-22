@@ -8,3 +8,9 @@ editURL = "https://github.com/Genghis1227/Trinhism.com-wiki/edit/main/content/"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

@@ -47,6 +47,21 @@ QuickCatch includes several features to speed up your verification workflow and 
     *   *Archive*: Instantly removes the transaction from the pending list and moves the source email out of your Gmail inbox.
     *   *Delete*: Trashes the source email and dismisses the transaction locally.
     *   *Dismiss*: Clears the transaction from the local list without affecting your emails.
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/Settings/Settings-UISwipeGestureOptions.JPEG" alt="Swipe Gesture Options Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Swipe Gestures Settings</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/SwipeLeft-Dismiss.JPEG" alt="Swipe Left to Dismiss" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Swipe Left (Dismiss)</p>
+  </div>
+  <div style="flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/MainScreen/SwipeRight-Archive.JPEG" alt="Swipe Right to Archive" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">Swipe Right (Archive)</p>
+  </div>
+</div>
 *   **Multi-Select Bulk Actions**: Select multiple transactions simultaneously to batch-import them to YNAB, archive them, or delete them in one tap.
 *   **Inbox Hygiene Sync**:
     *   *Archive on Import*: Automatically moves the source Gmail message to your email archive once the transaction is successfully pushed to YNAB.
@@ -60,9 +75,35 @@ As a "Local-First" application, QuickCatch incorporates robust local protection 
 
 *   **SQLCipher Local Encryption**: Your transaction history, rules, and cache tables are stored in a local Room database encrypted with industrial-grade **AES-256 encryption via SQLCipher**. No plaintext financial logs are stored on the device.
 *   **Duplicate Protection**: A robust history-matching engine tracks processed message IDs and notification signatures, ensuring the same alert is never imported twice, even during force-synchronizations.
-*   **JSON Configuration Export**: Export all your preferences, custom category maps, and trusted bank rules as a human-readable JSON file.
-*   **Smart Rule Re-linking**: When importing a backup JSON, QuickCatch uses **Name-Based Resolution** to match your custom rules to YNAB account IDs in your current budget, allowing painless migration across budgets or devices.
 *   **Demo Mode Mock Environment**: Test the app and all matching engines safely using a pre-configured simulation mode that uses mock financial data before connecting your real Gmail or YNAB credentials.
+
+### 📤 Settings & Rules Backup (Export & Import)
+To ensure your custom category mappings, whitelists, and preferences are not lost, QuickCatch includes a local backup and restore system:
+1.  **Export Configuration**:
+    *   Navigate to **Settings** > **Maintenance Tools**.
+    *   Tap **Export Configuration** to compile all local whitelists, custom payee renaming rules, and settings preferences into a human-readable JSON backup file.
+2.  **Import Configuration**:
+    *   Tap **Import Configuration** from the Maintenance Tools panel and select your previously saved JSON file.
+    *   **Smart Rule Re-linking**: When importing a backup JSON, QuickCatch uses **Name-Based Resolution** to match your custom rules to YNAB account IDs in your current target budget, avoiding broken UUID references.
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/DemoMode/Demo-ConnectivityScreen.JPEG" alt="Demo Connectivity Status" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Demo Connectivity</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/DemoMode/Demo-YNABSettings.JPEG" alt="Demo YNAB Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Demo YNAB Settings</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/DemoMode/Demo-AccountMapping.JPEG" alt="Demo Account Mapping" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Demo Account Maps</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/DemoMode/Demo-TransactionScreen.JPEG" alt="Demo Transaction List" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Demo Transactions</p>
+  </div>
+</div>
 
 ---
 
@@ -85,8 +126,32 @@ Under **Settings** > **Sync Frequencies**, you can customize how background task
 *   **Instant Triggers**: If enabled, QuickCatch uses a high-priority system channel to instantly wake up the sync engine the second a notification is caught.
 *   **Periodic Fallback Sync**: A safety valve that runs every **15 minutes** (Android's minimum interval) to catch any transactions that failed to upload during network outages.
 
-### 3. Log Retention Toggles
-For security and privacy, you can control what data is stored locally:
-*   **Log Retention Policy**: Toggle between *Do Not Log*, *Store for 24 Hours* (default), or *Store for 7 Days*.
-*   **Clear Log Data**: Instantly clears all parsed notification payloads and API transmission logs from the Room Database.
+### 3. Maintenance Tools
+For troubleshooting, diagnostic, or security resets:
+*   **Clear Processed History**: Deletes all cached transaction signatures and notification log IDs from the database, allowing previously parsed notifications to be processed again.
 *   **Full App Reset**: A diagnostic tool in the maintenance panel that wipes all local configurations, database tables, and YNAB access tokens for a clean start.
+
+---
+
+## ⚙️ App Settings Reference
+
+QuickCatch features an extensive settings dashboard allowing detailed customization of account mappings, synchronization intervals, interface behaviors, and data utilities.
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/Settings/Settings-UISettings.JPEG" alt="UI Preferences Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">UI Preferences</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/Settings/Settings-YNABPreferences.JPEG" alt="YNAB Preferences Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">YNAB Preferences</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/Settings/Settings-UIGmailQuickAction.JPEG" alt="Gmail Quick Action Settings" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Gmail Quick Actions</p>
+  </div>
+  <div style="flex: 1; min-width: 160px; max-width: 200px; text-align: center;">
+    <img src="/wiki/images/QuickCatch/Settings/Settings-MaintenanceTools.JPEG" alt="Maintenance Tools" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.8em; color: var(--text-muted); margin-top: 6px;">Maintenance Tools</p>
+  </div>
+</div>
