@@ -29,9 +29,6 @@ Follow these four simple steps to get QuickCatch up and running on your Android 
 ### Step 1: Install the Application
 Download and install the **QuickCatch** package (`com.trinhism.quickcatch`) onto your Android device. 
 
-> [!NOTE]
-> Since QuickCatch is currently in active development, you may need to enable installation from **Unknown Sources** in your Android security settings if you are sideloading the `.apk`.
-
 ### Step 2: Grant Permissions
 Upon launching QuickCatch for the first time, you will be prompted with a guided onboarding wizard:
 1.  **Notification Listener Permission**: Tap **Grant Permission** to be taken to Android's system settings. Locate **QuickCatch** in the list and toggle it **ON**. This allows the background parser to catch financial notification alerts.
