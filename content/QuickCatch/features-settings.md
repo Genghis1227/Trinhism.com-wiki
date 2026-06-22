@@ -39,6 +39,33 @@ Peer-to-peer payment apps often bundle the payee name as the person you sent mon
 
 ---
 
+## ⚡ Workflow Efficiency & Inbox Hygiene
+
+QuickCatch includes several features to speed up your verification workflow and keep your email inbox clean:
+
+*   **Customizable Swipe Gestures**: You can configure Left/Right swipe actions in the main transaction list to perform quick tasks:
+    *   *Archive*: Instantly removes the transaction from the pending list and moves the source email out of your Gmail inbox.
+    *   *Delete*: Trashes the source email and dismisses the transaction locally.
+    *   *Dismiss*: Clears the transaction from the local list without affecting your emails.
+*   **Multi-Select Bulk Actions**: Select multiple transactions simultaneously to batch-import them to YNAB, archive them, or delete them in one tap.
+*   **Inbox Hygiene Sync**:
+    *   *Archive on Import*: Automatically moves the source Gmail message to your email archive once the transaction is successfully pushed to YNAB.
+    *   *Mark as Read*: Automatically flags archived emails as "Read" to ensure your Gmail status stays clean.
+
+---
+
+## 🛡️ Data Security & Portability
+
+As a "Local-First" application, QuickCatch incorporates robust local protection and backup utilities:
+
+*   **SQLCipher Local Encryption**: Your transaction history, rules, and cache tables are stored in a local Room database encrypted with industrial-grade **AES-256 encryption via SQLCipher**. No plaintext financial logs are stored on the device.
+*   **Duplicate Protection**: A robust history-matching engine tracks processed message IDs and notification signatures, ensuring the same alert is never imported twice, even during force-synchronizations.
+*   **JSON Configuration Export**: Export all your preferences, custom category maps, and trusted bank rules as a human-readable JSON file.
+*   **Smart Rule Re-linking**: When importing a backup JSON, QuickCatch uses **Name-Based Resolution** to match your custom rules to YNAB account IDs in your current budget, allowing painless migration across budgets or devices.
+*   **Demo Mode Mock Environment**: Test the app and all matching engines safely using a pre-configured simulation mode that uses mock financial data before connecting your real Gmail or YNAB credentials.
+
+---
+
 ## 🔋 Managing Sync & Android Settings
 
 Because QuickCatch relies on persistent background listening, Android's system battery savers can sometimes interfere with performance. Follow these guidelines to secure reliable sync:
