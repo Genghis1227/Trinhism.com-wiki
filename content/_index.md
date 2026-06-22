@@ -36,4 +36,3 @@ For technical support, reporting bug behaviors, or requesting feature whitelists
 *   **QuickCatch Inquiries**: **quickcatch [at] trinhism.com**
 *   **FinanceWidget Inquiries**: **support [at] trinhism.com**
 
-Alternatively, you may open an issue directly on the respective application's repository dashboard.
