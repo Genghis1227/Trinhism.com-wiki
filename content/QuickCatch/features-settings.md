@@ -121,10 +121,10 @@ Android is aggressive about putting background processes to sleep. To keep Quick
 > [!IMPORTANT]
 > Failure to disable battery optimization will result in delayed syncs, where notifications are only processed when the screen is turned on.
 
-### 2. Adjusting background WorkManager Settings
-Under **Settings** > **Sync Frequencies**, you can customize how background tasks are scheduled:
-*   **Instant Triggers**: If enabled, QuickCatch uses a high-priority system channel to instantly wake up the sync engine the second a notification is caught.
-*   **Periodic Fallback Sync**: A safety valve that runs every **15 minutes** (Android's minimum interval) to catch any transactions that failed to upload during network outages.
+### 2. Adjusting Gmail Sync Settings
+Under **Settings** > **Sync Frequencies**, you can configure how Gmail background polling and synchronization are handled:
+*   **Gmail Polling Frequency**: Customize how often the background service checks your Gmail inbox for new transaction alerts (respecting Android's WorkManager limitations, with a 15-minute minimum).
+*   **Instant Gmail Trigger**: If enabled, uses high-priority notification triggers to immediately launch the email parser the moment a push alert is received, bypassing default polling delays.
 
 ### 3. Maintenance Tools
 For troubleshooting, diagnostic, or security resets:
