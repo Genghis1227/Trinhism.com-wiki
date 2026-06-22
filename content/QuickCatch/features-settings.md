@@ -124,7 +124,7 @@ Android is aggressive about putting background processes to sleep. To keep Quick
 ### 2. Adjusting Gmail Sync Settings
 Under **Settings** > **Sync Frequencies**, you can configure how Gmail background polling and synchronization are handled:
 *   **Gmail Polling Frequency**: Customize how often the background service checks your Gmail inbox for new transaction alerts (respecting Android's WorkManager limitations, with a 15-minute minimum).
-*   **Instant Gmail Trigger**: If enabled, uses high-priority notification triggers to immediately launch the email parser the moment a push alert is received, bypassing default polling delays.
+*   **Instant Gmail Trigger**: If enabled, uses high-priority notification triggers to immediately launch the email parser the moment a push alert is received, bypassing default polling delays. *Note: Enabling the Instant Gmail Trigger makes the standard polling frequency option unavailable (grayed out) as it transitions the sync to pure push-events.*
 
 ### 3. Maintenance Tools
 For troubleshooting, diagnostic, or security resets:
