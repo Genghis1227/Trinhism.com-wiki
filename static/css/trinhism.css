@@ -51,6 +51,8 @@ body {
   background-size: 40px 40px !important;
   color: var(--text-color) !important;
   font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -121,6 +123,9 @@ article section.page h4 {
   font-weight: 700 !important;
   color: var(--text-color) !important;
   letter-spacing: -0.03em;
+  line-height: 1.25 !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 1rem !important;
 }
 
 article section.page h1:first-of-type {
@@ -131,6 +136,12 @@ article section.page h1:first-of-type {
   padding-bottom: 0.5rem;
   margin-top: 1rem !important;
   margin-bottom: 2rem !important;
+}
+
+article section.page p,
+article section.page li {
+  line-height: 1.7 !important;
+  margin-bottom: 1.25rem !important;
 }
 
 /* Links & Text */
@@ -297,5 +308,46 @@ footer {
 .nav-select select option {
   background-color: var(--surface-color) !important;
   color: var(--text-color) !important;
+}
+
+/* Mobile Responsive Adjustments to Prevent Compacted Text */
+@media (max-width: 767px) {
+  body {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+  
+  article section.page h1:first-of-type {
+    font-size: 2.0rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  article section.page h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  article section.page h2 {
+    font-size: 1.45rem !important;
+  }
+  
+  article section.page h3 {
+    font-size: 1.25rem !important;
+  }
+
+  article section.page p,
+  article section.page li {
+    line-height: 1.65 !important;
+    margin-bottom: 1.0rem !important;
+    letter-spacing: -0.005em !important;
+  }
+
+  /* Ensure tables don't squish too much and are scrollable on small viewports */
+  article section.page table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 }
 
