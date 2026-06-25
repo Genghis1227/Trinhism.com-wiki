@@ -4,6 +4,10 @@ type = "docdock"
 weight = 10
 +++
 
+<p align="center">
+  <img src="/wiki/images/quickcatch-logo.png" alt="QuickCatch Logo" width="120" />
+</p>
+
 # QuickCatch Documentation Hub
 
 Welcome to the **QuickCatch** documentation space. QuickCatch is a real-time Android budgeting assistant designed for power YNAB users who want to eliminate the delay between spending money and seeing the impact on their budget.

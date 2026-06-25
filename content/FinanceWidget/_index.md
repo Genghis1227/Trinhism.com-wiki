@@ -4,6 +4,10 @@ type = "docdock"
 weight = 20
 +++
 
+<p align="center">
+  <img src="/wiki/images/financewidget-logo.png" alt="FinanceWidget Logo" width="120" />
+</p>
+
 # FinanceWidget Documentation Hub
 
 Welcome to the **FinanceWidget** documentation space. FinanceWidget is a lightweight desktop utility designed for traders and long-term investors who want clear, continuous visibility of market charts and ticker data directly on their Windows workspaces.
