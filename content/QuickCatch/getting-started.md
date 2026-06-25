@@ -148,5 +148,29 @@ To test your setup:
   </div>
 </div>
 
+---
+
+## 💡 Practical Example: Accurate Transaction Entry in a Single Click
+
+To see the power of QuickCatch, consider this common everyday use case at a gas station pump:
+
+### Phase 1: The Temporary Pump Hold ($1.00)
+1. **The Swipe**: You swipe your credit card at the pump to buy fuel.
+2. **The Hold**: The gas station issues a temporary pre-authorization hold (typically **$1.00** or **$100.00**), which triggers an instant email alert from your card provider.
+3. **The Interception**: QuickCatch catches the email. It parses the merchant (e.g. `Shell Oil`) and the temporary amount of `$1.00`.
+4. **The User Choice**: Since you know this is just a hold, you simply swipe the transaction entry left to **Archive** the email alert and clear it from the pending list.
+
+### Phase 2: The Completed Transaction (One-Click YNAB Send)
+1. **The Final Settlement**: After you finish fueling, the pump finishes and the final transaction (e.g. **$34.50**) settles, triggering a final notification or email confirmation.
+2. **The Auto-Fill Match**: QuickCatch intercepts the final transaction. Instead of forcing you to type the details:
+   * **Payee**: Automatically cleaned from `SHELL OIL #481729` to `Shell`.
+   * **Account**: Automatically routed to your mapped Credit Card account via your account rules.
+   * **Category**: Pre-filled to **"Gas/Fuel"** using Category Intelligence (based on your recent 3-month history).
+3. **The One-Click Send**: A notification banner appears on your phone showing the pre-filled transaction parameters. You tap the **Send to YNAB** button directly on the push notification shade.
+
+**One-click... caught, verified, and sent.** The transaction is logged in YNAB immediately, keeping your budget accurate without ever requiring you to open the QuickCatch app or manually type a single field.
+
+---
+
 > [!TIP]
 > To test the notification parser and simulate transaction alerts safely without real credentials, perform a **Full App Reset** in the maintenance tools panel, launch the app in **Demo Mode**, and tap the **Simulate Bank Alert** button.
