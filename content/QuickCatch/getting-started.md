@@ -158,7 +158,7 @@ To see the power of QuickCatch, consider this common everyday use case at a gas 
 1. **The Swipe**: You swipe your credit card at the pump to buy fuel.
 2. **The Hold**: The gas station issues a temporary pre-authorization hold (typically **$1.00** or **$100.00**), which triggers an instant email alert from your card provider.
 3. **The Interception**: QuickCatch catches the email. It parses the merchant (e.g. `Shell Oil`) and the temporary amount of `$1.00`.
-4. **The User Choice**: Since you know this is just a hold, you simply swipe the transaction entry left to **Archive** the email alert and clear it from the pending list.
+4. **The User Choice**: Since you know this is just a hold, you click the notification to dismiss it directly from your status bar without importing it.
 
 ### Phase 2: The Completed Transaction (One-Click YNAB Send)
 1. **The Final Settlement**: After you finish fueling, the pump finishes and the final transaction (e.g. **$34.50**) settles, triggering a final notification or email confirmation.
