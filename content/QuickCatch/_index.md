@@ -33,3 +33,8 @@ Manual entry is tedious, and waiting 24 to 72 hours for bank imports to clear ca
 ---
 
 > 💡 **Tip**: Get started by reading the [Getting Started with QuickCatch](./getting-started/) guide to configure notification access and link your YNAB account.
+
+---
+
+## ✉️ Support & Community
+Have questions, need help troubleshooting, or want to request feature whitelists? Join the official [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for community support and discussions, or email us directly at **quickcatch [at] trinhism.com**.
