@@ -41,6 +41,6 @@ Use the sidebar navigation or the quick links below to explore the documentation
 
 ## ✉️ Support & Inquiries
 For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
-*   **QuickCatch Inquiries**: **quickcatch [at] trinhism.com**
+*   **QuickCatch Inquiries**: contact **quickcatch [at] trinhism.com** or join the [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for discussions and support.
 *   **FinanceWidget Inquiries**: **support [at] trinhism.com**
 
