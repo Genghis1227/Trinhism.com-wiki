@@ -25,7 +25,7 @@ The Poker Tournament Director is a self-contained HTML/JS web application that r
 Running a home game shouldn't require complex software installations, cloud accounts, or third-party servers. We built this tool to be fast, reliable, and completely private.
 
 *   🔒 **100% Client-Side Privacy**: Your roster, financial ledgers, and configurations are processed locally in your browser. Nothing is ever sent to a database.
-*   🔊 **Audio-Visual Feedback**: Features an automated text-to-speech engine that announces new blind levels, along with 1-minute warnings and countdown beeps, so players never miss a round.
+*   🔊 **Audio-Visual Feedback**: Features distinct warning chimes for round level increases, 1-minute warnings, and precision countdown beeps during the final seconds of a round, so players never miss a round.
 *   📊 **Dynamic Financial Ledgers**: Configure your chip breakdown, rake percentages, and payout structures. The app automatically balances the pot and calculates player payouts in real-time as buy-ins, rebuys, and addons occur.
 *   🎬 **Theater Mode**: A distraction-free, full-screen display mode that hides the configuration panels, perfect for casting to a TV or secondary monitor for all players to see.
 *   💾 **Portable Configurations**: Save and share your tournament setups via lightweight JSON files. Import them instantly before your next game.

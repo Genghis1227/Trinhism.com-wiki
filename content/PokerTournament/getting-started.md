@@ -38,7 +38,7 @@ When players are seated and chips are distributed, you're ready to play!
 
 - Press **Start Game** on the main clock interface.
 - To prevent accidental changes, the Settings sidebar will automatically lock when the game starts. (You can unlock it if you urgently need to fix a typo).
-- **Audio Alerts:** The application will use Text-To-Speech to announce the new blind levels when the timer runs out. Ensure your device volume is up.
+- **Audio Alerts:** The application will play warning chimes and beeps to alert players when levels increase or end. Ensure your device volume is up.
 
 ## 5. Theater Mode
 For the ultimate home game experience, click the **Theater Mode** button in the top action bar. This will hide the sidebars, maximize the clock and pot sizes, and center the display. Hook your laptop up to a TV to give all players a clear view of the tournament state!

@@ -11,7 +11,7 @@ Here is a breakdown of the core features that make managing your home game effor
 
 ## 🕒 Precision Tournament Clock
 - **Dynamic Blind Updates:** Automatically pulls the duration and blind amounts from your configured schedule.
-- **Audio Announcements:** Utilizes the Web Speech API to provide verbal announcements when blind levels increase or breaks occur (e.g., *"Blinds are now 100 and 200"*).
+- **Audio Alerts:** Plays dynamic warning chimes and beeps (via the Web Audio API) to notify players when blind levels increase, when a break starts, or during the 1-minute round countdown.
 - **Time Warnings:** Plays a distinctive audio chime when there is 1 minute remaining in the current round.
 - **Manual Adjustments:** Easily pause, resume, skip rounds, go back a round, or manually inject/remove minutes from the active timer if you need to adjust for unexpected delays.
 
