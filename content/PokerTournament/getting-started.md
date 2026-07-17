@@ -17,7 +17,7 @@ Before you start the timer, use the **Settings Sidebar** on the left to prepare 
 
 ### Financial Configuration
 1. **Rake & Costs:** Under the Configuration section, you can optionally configure a percentage or fixed rake taken from the prize pool.
-2. **Custom Chip Matrix:** Define the total starting stack size and customize your physical chip stack inline. You can select preset colors, pick custom shades, edit color names, and adjust denominations and stack quantities dynamically.
+2. **Custom Chip Matrix:** Define the total starting stack size and customize your physical chip stack inline. Click on the chip color swatch to open a selection popover of preset colors, trigger a native color picker for custom hex shades, edit color names, and adjust denominations and stack quantities dynamically.
 3. **Payout Structure:** Set how many places pay out (e.g., Top 3) and assign the percentage of the pot each place will receive. The app will automatically validate that your payouts total exactly 100%.
 
 ### Blind Schedule

@@ -27,7 +27,7 @@ Here is a breakdown of the core features that make managing your home game effor
 
 ## 🛠️ Flexible Blind & Chip Configuration
 - **Custom Schedules:** Build your blind schedule from scratch or edit the default layout. Mix and match blind rounds, standard breaks, and specific "Color Up" breaks.
-- **Dynamic Chip Matrix Editor:** Build custom chip stacks using fully customizable chip configurations. Adjust chip colors (via inline preset palettes or a custom native color picker), rename color labels, and assign custom face values and stack quantities. The dashboard automatically validates that your physical chip breakdown equals the starting stack size before allowing the tournament timer to start.
+- **Dynamic Chip Matrix Editor:** Build custom chip stacks using fully customizable chip configurations. Adjust chip colors (via an interactive popover with 12 preset color swatches or a custom native color picker), rename color labels, and assign custom denominations and stack quantities dynamically. The editor includes click-outside handlers and z-index overlay fixes to prevent UI click block issues. The system also supports automatic schema migration, transforming legacy JSON configurations (using static `chips` objects) into the new dynamic `chipMatrix` array format seamlessly on import.
 
 ## 📤 Save, Export, and Share
 - **Portable JSON Configurations:** Once you design the perfect tournament structure for your group, you can click **Export Settings** to save a lightweight JSON file to your computer. 

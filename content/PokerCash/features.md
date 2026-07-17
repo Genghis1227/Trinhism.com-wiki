@@ -31,10 +31,11 @@ The engine includes a custom settlement engine that automatically matches debtor
 
 ## 📱 Prefilled Mobile Payment Integrations
 
-Clear debts instantly using built-in URL builders and QR generation.
-*   **Prefilled Text URLs**: The copied settlement text appends URL schemes for Venmo and PayPal. Recipients can click the link inside their messaging app to open Venmo or PayPal with the recipient, dollar amount, and "Poker" note prefilled.
-*   **Dynamic QR Codes**: Settlement screens generate HTML canvas-rendered QR codes using `QRious` based on the calculated settlement amounts, letting players scan and clear up directly from the host's screen.
-*   **Clickable Roster Links**: Venmo and PayPal handles in the Master Roster are rendered as clickable URLs, allowing hosts to verify profile details with one click.
+Clear debts instantly using built-in URL builders, QR overlays, and pre-filled copy ledgers.
+*   **Pre-filled URL Copy Ledger**: The copyable settlement text generates and appends pre-filled mobile payment URLs (with txn type, amount, and notes) directly next to each debtor instruction, allowing players to pay in one tap.
+*   **Player Profile QR Modal**: Hosts can click a QR code icon on any player card in the active game view or master roster to instantly generate and overlay a QR code canvas pointing directly to their Venmo or PayPal profile page, making table-side profile discovery extremely fast.
+*   **Dynamic Settlement QR Codes**: End-of-session settlement screens generate HTML canvas-rendered QR codes using `QRious` based on the calculated settlement amounts, letting players scan and clear up directly from the host's screen.
+*   **Clickable Roster Links**: Venmo and PayPal handles in the Master Roster are formatted as clickable links, allowing hosts to verify profile details with a single click.
 
 ---
 
