@@ -36,6 +36,7 @@ Peer-to-peer payment apps often bundle the payee name as the person you sent mon
     *   *Enabled (Recommended)*: Sets the YNAB payee to **"Venmo"** or **"Zelle"** and moves the recipient's name and payment description to the YNAB **Memo** field (e.g. `Memo: Sent $25 to John Doe for Dinner`).
     *   *Disabled*: Sets the payee directly to the recipient's name (e.g. `Payee: John Doe`).
 2.  **Account Mapping Rules**: In **Settings** > **Account Rules**, you can route all Venmo or Zelle payments to land in your default Checking Account or a specific Venmo/Zelle Cash account inside YNAB automatically.
+3.  **Venmo Deposit Classification**: The specialized `VenmoEmailParser` parses email alert keywords to correctly distinguish bank transfers and deposits as credit events (inflow deposits) rather than charge/expense events.
 
 ---
 
@@ -63,6 +64,8 @@ QuickCatch includes several features to speed up your verification workflow and 
   </div>
 </div>
 *   **Multi-Select Bulk Actions**: Select multiple transactions simultaneously to batch-import them to YNAB, archive them, or delete them in one tap.
+*   **Adaptive UI Layout**: Leveraging `NavigationSuiteScaffold` and `WindowSizeClass`, the app interface adapts dynamically. On standard smartphones, a traditional Bottom Navigation bar is displayed, while on tablets, foldables, or landscape layouts, the navigation transitions smoothly to a side Navigation Rail.
+*   **Inbox Zero Fanfare**: Achieving a completely cleared transaction ledger triggers a congratulatory full-screen animation (selectable between Rocket launch, Confetti pop, or Money rain) to celebrate inbox zero.
 *   **Inbox Hygiene Sync**:
     *   *Archive on Import*: Automatically moves the source Gmail message to your email archive once the transaction is successfully pushed to YNAB.
     *   *Mark as Read*: Automatically flags archived emails as "Read" to ensure your Gmail status stays clean.
@@ -130,6 +133,7 @@ Under **Settings** > **Sync Frequencies**, you can configure how Gmail backgroun
 For troubleshooting, diagnostic, or security resets:
 *   **Clear Processed History**: Deletes all cached transaction signatures and notification log IDs from the database, allowing previously parsed notifications to be processed again.
 *   **Full App Reset**: A diagnostic tool in the maintenance panel that wipes all local configurations, database tables, and YNAB access tokens for a clean start.
+*   **Blocking Maintenance UI**: Initiating critical operations (such as importing configuration backups or triggering a full app reset) displays a non-dismissible progress dialog. This blocks user interaction and system interrupts to ensure safe file and database executions, followed by a clean app reboot.
 
 ---
 

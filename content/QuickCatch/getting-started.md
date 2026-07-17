@@ -14,7 +14,7 @@ weight = 10
 
 Before installing and setting up QuickCatch, ensure you meet the following requirements:
 
-*   **Android Device**: Android 7.0 (API Level 24) or higher.
+*   **Android Device**: Android 7.0 (API Level 24) or higher. Fully compatible with Google Play Store certified devices and uncertified, privacy-focused ROMs like **GrapheneOS** (features hardware feature overrides and billing manager resilience).
 *   **Active YNAB Account**: A configured budget with at least one active checking, cash, or credit card account.
 *   **Notification Access**: A device configured to show financial transaction alerts in the system tray (alerts from apps like Chase, Citi, Venmo, Zelle, Cash App, etc.).
 *   **Gmail Integration (Optional)**: Access to the Google Account linked to your bank emails if you wish to run instant background parsing for email notifications.

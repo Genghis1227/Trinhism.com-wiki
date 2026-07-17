@@ -71,6 +71,11 @@ QuickCatch uses the official [YNAB API](https://api.ynab.com/) to sync transacti
 5.  Tap **Authorize**. You will be automatically redirected back to QuickCatch via the custom protocol scheme `quickcatch://`.
 6.  The app will automatically retrieve and safely store the encrypted **Access Token** and **Refresh Token** in your device's secure local storage.
 
+### YNAB Sync Optimization & Caching
+To minimize startup delays and reduce network usage, QuickCatch implements metadata caching:
+*   **12-Hour Cache**: Budget files, categories, and account list metadata are cached locally for 12 hours. Background sync workers and main app launches bypass redundant YNAB API calls, making execution significantly faster.
+*   **Manual Refresh**: You can force an immediate refresh of your YNAB metadata using the refresh button on the connectivity status page. A relative timestamp (e.g., *"Last updated 5 mins ago"*) displays the age of the currently cached data.
+
 ---
 
 ## 🔒 Security & Privacy Practices

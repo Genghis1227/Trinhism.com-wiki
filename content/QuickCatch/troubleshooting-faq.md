@@ -44,3 +44,9 @@ QuickCatch connects to your YNAB profile and can access any budget files shared 
 
 ### What happens if I make a transaction while offline?
 If you are in airplane mode or have no internet connection, QuickCatch will still capture the notification and store the parsed transaction locally in its SQLite database. A background task managed by Android's **WorkManager** will automatically retry uploading the pending transaction once network connectivity is restored.
+
+### Is QuickCatch compatible with GrapheneOS or custom uncertified ROMs?
+**Yes.** QuickCatch has been engineered to run reliably on custom, security-hardened ROMs like **GrapheneOS**. The manifest includes specific hardware feature overrides to prevent incorrect filter blocking in alternative app stores, and the `BillingManager` has robust error fallback logic to gracefully handle systems without standard Google Play Services billing infrastructure.
+
+### What is the "Syncs Remaining" counter in Settings?
+For free tier users, a reactive **Syncs Remaining** countdown indicator is displayed directly in the Settings menu. This allows users to easily track their remaining transaction sync limit for the current cycle. (For testing and validation purposes, debug builds also expose a hidden "Force Free Mode" toggle inside Maintenance Tools).
