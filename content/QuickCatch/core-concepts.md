@@ -32,6 +32,8 @@ QuickCatch operates as a background system integration tool. Instead of waiting 
 
 1.  **Intercept**: When a transaction occurs, your banking app creates a system notification, or your bank sends a notification email to your Gmail account.
 2.  **Verify & Parse**: QuickCatch's `StandardNotificationParser` or `EmailParserAggregator` reads the payload. It applies a **DNA Check** to confirm it is a financial transaction (preventing spam or social notifications from triggering runs) and extracts the numeric value, currency, merchant name, and timestamp.
+    *   **Strict Word-Boundary Filtering**: Ensures high-fidelity matching, intelligently ignoring non-transactional words like "earn" while catching valid ones like "learn".
+    *   **Price-Aware HTML Cleaning**: Sanitizes heavily formatted promotional and banking emails, preserving decimal components (e.g. Venmo's `$141<span>.</span>87`).
 3.  **Local Sync**: The details are stored in your local **Room Database** and matched against your custom rules.
 4.  **Forward**: QuickCatch initiates a background sync request via `WorkManager` to push the transaction to YNAB's `transactions` API endpoint using secure **HTTPS/TLS**.
 
