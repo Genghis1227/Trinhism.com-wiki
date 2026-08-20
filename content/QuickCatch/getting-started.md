@@ -148,6 +148,21 @@ To test your setup:
   </div>
 </div>
 
+
+---
+
+## 🚦 Guided Onboarding & Validation Banners
+
+To prevent setup issues or "silent failures" (such as disabled permissions or missing account connections), QuickCatch features an active self-healing checklist.
+
+At the top of the main screen, the application performs real-time validation checks and displays actionable banners if attention is required:
+*   **YNAB Connection**: Alerts you if the OAuth connection is missing or has expired.
+*   **Plan Selection**: Prompts you to pick a target YNAB budget once authenticated.
+*   **Account Mapping**: Warns you if no account mapping rules are configured, preventing transaction routing.
+*   **Detection Sources**: Warns if both Gmail background scanning and notification listening are turned off, meaning the app cannot capture any spending alerts.
+
+Tapping any banner will instantly navigate you to the exact settings screen needed to resolve the issue. Once YNAB authentication is completed, the app triggers an **Automatic Post-Auth Sync** to fetch all budgets, accounts, and categories immediately.
+
 ---
 
 ## 💡 Practical Example: Accurate Transaction Entry in a Single Click

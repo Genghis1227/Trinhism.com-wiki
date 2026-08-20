@@ -40,6 +40,32 @@ Peer-to-peer payment apps often bundle the payee name as the person you sent mon
 
 ---
 
+## 📇 YNAB Account Mapping & Routing
+
+To automatically route intercepted transactions to the correct account inside YNAB, QuickCatch offers a flexible Account Mapping system. Rather than forcing you to configure everything manually, the app can sync rules directly from your YNAB budget notes.
+
+### Smart Rule Generation (Sync from YNAB)
+During database synchronization, QuickCatch scans the account names and **Account Notes** in your YNAB budget for matching keywords (typically the last 4 digits of the card or account).
+*   **Format**: Enclose keywords or digits in parentheses, separated by semicolons (e.g., `(8362; 3871)`).
+*   **Auto-Sync**: Once detected, the app automatically generates and registers these mapping rules, displaying them as synced tags (marked with a sync `🔄` badge) under the corresponding YNAB account in **Settings** > **YNAB**.
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 20px 0;">
+  <div style="flex: 1; min-width: 250px; max-width: 320px; text-align: center;">
+    <img src="/wiki/images/AccountMapping-YNAB.png" alt="YNAB Account Note Configuration" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">1. YNAB Account Notes: (8362; 3871)</p>
+  </div>
+  <div style="flex: 1; min-width: 250px; max-width: 320px; text-align: center;">
+    <img src="/wiki/images/AccountMapping-QuickCatch.png" alt="QuickCatch Settings YNAB Account Mapping" style="width: 100%; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+    <p style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">2. Auto-Synced Rules in Settings > YNAB</p>
+  </div>
+</div>
+
+### Manual Rules & Conflict Resolution
+*   **Manual Overrides**: You can tap the `+` icon on any account card in the app settings to manually add your own routing keywords, or tap the trash icon next to any rule to remove it.
+*   **Conflict Resolution**: Priority is always given to your manually configured keyword rules. If an incoming transaction matches multiple accounts or has no match, the app flags it as **"Needs Account"** in the pending queue, letting you choose the correct destination account manually before pushing it to YNAB.
+
+---
+
 ## ⚡ Workflow Efficiency & Inbox Hygiene
 
 QuickCatch includes several features to speed up your verification workflow and keep your email inbox clean:
@@ -65,7 +91,8 @@ QuickCatch includes several features to speed up your verification workflow and 
 </div>
 *   **Multi-Select Bulk Actions**: Select multiple transactions simultaneously to batch-import them to YNAB, archive them, or delete them in one tap.
 *   **Adaptive UI Layout**: Leveraging `NavigationSuiteScaffold` and `WindowSizeClass`, the app interface adapts dynamically. On standard smartphones, a traditional Bottom Navigation bar is displayed, while on tablets, foldables, or landscape layouts, the navigation transitions smoothly to a side Navigation Rail.
-*   **Inbox Zero Fanfare**: Achieving a completely cleared transaction ledger triggers a congratulatory full-screen animation (selectable between Rocket launch, Confetti pop, or Money rain) to celebrate inbox zero.
+*   **Inbox Zero Fanfare**: Achieving a completely cleared transaction ledger triggers a congratulatory full-screen animation to celebrate inbox zero. You can choose your preferred animation in UI Settings: **Rocket Launch**, **Confetti Pop**, **Money Rain**, **Blowhorn**, **Party Popper**, or **Clapping**.
+*   **In-App Update API**: Checks for new app versions on launch and downloads updates in the background. A snackbar notification displays a "RESTART" action to immediately apply the update.
 *   **Inbox Hygiene Sync**:
     *   *Archive on Import*: Automatically moves the source Gmail message to your email archive once the transaction is successfully pushed to YNAB.
     *   *Mark as Read*: Automatically flags archived emails as "Read" to ensure your Gmail status stays clean.
