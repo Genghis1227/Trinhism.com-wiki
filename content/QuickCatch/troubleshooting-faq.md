@@ -50,3 +50,8 @@ If you are in airplane mode or have no internet connection, QuickCatch will stil
 
 ### What is the "Syncs Remaining" counter in Settings?
 For free tier users, a reactive **Syncs Remaining** countdown indicator is displayed directly in the Settings menu. This allows users to easily track their remaining transaction sync limit for the current cycle. (For testing and validation purposes, debug builds also expose a hidden "Force Free Mode" toggle inside Maintenance Tools).
+
+### Why is Gmail sync gated under "Experimental Labs" as a Private Beta?
+Google requires any application requesting access to the Gmail API to undergo a rigorous and expensive annual security audit called the **Cloud Application Security Assessment (CASA)**. Because the cost of this assessment is prohibitive for independent developers, QuickCatch cannot release Gmail email parsing as a standard, out-of-the-box production feature. 
+
+To work around this limitation for testing, Gmail sync is restricted to a **Private Beta** accessible only by unlocking the hidden **Experimental Labs** menu (by tapping the app version 7 times in Settings) and entering a developer-provided passcode. If you would like to be considered for beta testing the Gmail parsing functionality, please reach out to support at **quickcatch [at] trinhism.com**.

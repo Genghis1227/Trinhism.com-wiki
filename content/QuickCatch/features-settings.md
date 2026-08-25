@@ -151,16 +151,28 @@ Android is aggressive about putting background processes to sleep. To keep Quick
 > [!IMPORTANT]
 > Failure to disable battery optimization will result in delayed syncs, where notifications are only processed when the screen is turned on.
 
-### 2. Adjusting Gmail Sync Settings
+### 2. Adjusting Gmail Sync Settings (Private Beta)
 Under **Settings** > **Sync Frequencies**, you can configure how Gmail background polling and synchronization are handled:
 *   **Gmail Polling Frequency**: Customize how often the background service checks your Gmail inbox for new transaction alerts (respecting Android's WorkManager limitations, with a 15-minute minimum).
 *   **Instant Gmail Trigger**: If enabled, uses high-priority notification triggers to immediately launch the email parser the moment a push alert is received, bypassing default polling delays. *Note: Enabling the Instant Gmail Trigger makes the standard polling frequency option unavailable (grayed out) as it transitions the sync to pure push-events.*
+
+> [!WARNING]
+> **CASA Restriction & Passcode Gating**: Google's production Gmail API requirements (CASA security assessment) are cost-prohibitive for independent developers. Consequently, Gmail parsing has been moved to a **Private Beta** gated under the hidden **Experimental Labs** menu (unlocked by tapping the **App Version** label 7 times). A valid authorized passcode is required to enable this feature. Reach out to **quickcatch [at] trinhism.com** to request access.
 
 ### 3. Maintenance Tools
 For troubleshooting, diagnostic, or security resets:
 *   **Clear Processed History**: Deletes all cached transaction signatures and notification log IDs from the database, allowing previously parsed notifications to be processed again.
 *   **Full App Reset**: A diagnostic tool in the maintenance panel that wipes all local configurations, database tables, and YNAB access tokens for a clean start.
 *   **Blocking Maintenance UI**: Initiating critical operations (such as importing configuration backups or triggering a full app reset) displays a non-dismissible progress dialog. This blocks user interaction and system interrupts to ensure safe file and database executions, followed by a clean app reboot.
+
+---
+
+## 💎 Monetization & Product Tiers
+
+QuickCatch uses a simple, transparent entitlement model to support ongoing development:
+*   **QuickCatch Free**: Limited to 10 synced transactions per month. Includes all core push notification scanning and YNAB integration features.
+*   **Lifetime Standard**: A one-time in-app purchase that completely removes all monthly sync limits.
+*   **QuickCatch Pro (Roadmap)**: A future subscription tier designed for advanced cloud integration features, including Google Account/Gmail direct email parsing.
 
 ---
 

@@ -16,7 +16,7 @@ Welcome to the **QuickCatch** documentation space. QuickCatch is a real-time And
 
 ## 💡 What is QuickCatch?
 
-QuickCatch is a background-running Android integration utility that listens to financial transaction alerts (via system notifications and Gmail alerts) on your mobile device. When a transaction occurs, the app automatically cleans the raw text, matches the payee against your historical budget patterns, and instantly transmits the transaction data to the official YNAB API.
+QuickCatch is a background-running Android integration utility that listens to financial transaction alerts (via system notifications and experimental Gmail alerts) on your mobile device. When a transaction occurs, the app automatically cleans the raw text, matches the payee against your historical budget patterns, and instantly transmits the transaction data to the official YNAB API.
 
 ---
 
