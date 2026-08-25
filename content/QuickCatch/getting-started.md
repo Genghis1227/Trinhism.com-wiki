@@ -111,11 +111,17 @@ QuickCatch secure-syncs transactions directly to the official YNAB API.
 
 ---
 
-### Step 3b (Optional): Connect Gmail Parser
-If you wish to capture transaction alerts sent directly via email:
-1. Under settings, select **Google Account Login**.
-2. Perform Google OAuth login to authorize read-only access to transaction emails.
-3. The email parser will scan incoming mail from verified banks in real-time.
+### Step 3b (Optional): Gmail Parser (Experimental Private Beta)
+
+> [!IMPORTANT]
+> **CASA Security Assessment Restriction**: Google requires a formal Cloud Application Security Assessment (CASA) to grant production access to the Gmail API. Because this assessment is cost-prohibitive for independent developers, the Gmail parsing engine is gated inside **Experimental Labs** as a **Private Beta**. 
+> To request access to the Gmail beta test group, please reach out to **quickcatch [at] trinhism.com**.
+
+Once you have been added to the beta test group and provided an authorized passcode:
+1. Navigate to **Settings**, locate the **App Version** label, and tap it **7 times** to unlock the hidden **Experimental Labs** menu.
+2. Enter your authorized passcode to enable **Gmail Sync Beta**.
+3. Under settings, select **Google Account Login** and complete the Google OAuth login to authorize read-only access to transaction emails.
+4. The email parser will scan incoming mail from verified banks in real-time.
 
 <div style="display: flex; justify-content: center; margin: 20px 0;">
   <div style="max-width: 260px; text-align: center;">
