@@ -46,4 +46,4 @@ For the ultimate home game experience, click the **Theater Mode** button in the 
 ---
 
 **Next Steps:**
-Learn more about specific dashboard capabilities in the [Features](./features/) guide.
+Learn more about specific dashboard capabilities in the [Features](/wiki/pokertournament/features/) guide.

@@ -32,7 +32,7 @@ Running a home cash game can be chaotic. Tracking who bought in for how much, wh
 
 ---
 
-> 💡 **Tip**: Get started quickly by reading the [Getting Started](./getting-started/) guide to set up your master player pool and log your first transaction.
+> 💡 **Tip**: Get started quickly by reading the [Getting Started](/wiki/pokercash/getting-started/) guide to set up your master player pool and log your first transaction.
 
 ---
 

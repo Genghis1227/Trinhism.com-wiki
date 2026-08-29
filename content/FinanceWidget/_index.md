@@ -32,4 +32,4 @@ Keeping multiple browser tabs open just to monitor stock values is resource-heav
 
 ---
 
-> 💡 **Tip**: Read the [Getting Started with FinanceWidget](./getting-started/) guide to deploy your first widget module onto your desktop in minutes.
+> 💡 **Tip**: Read the [Getting Started with FinanceWidget](/wiki/financewidget/getting-started/) guide to deploy your first widget module onto your desktop in minutes.
