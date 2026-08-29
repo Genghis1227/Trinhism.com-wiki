@@ -32,7 +32,7 @@ Running a home game shouldn't require complex software installations, cloud acco
 
 ---
 
-> 💡 **Tip**: Get started quickly by reading the [Getting Started](./getting-started/) guide to configure your first tournament schedule.
+> 💡 **Tip**: Get started quickly by reading the [Getting Started](/wiki/pokertournament/getting-started/) guide to configure your first tournament schedule.
 
 ---
 
