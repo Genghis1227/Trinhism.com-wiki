@@ -39,8 +39,18 @@ Use the sidebar navigation or the quick links below to explore the documentation
 
 ---
 
+## 401(k) Optimizer
+**401(k) Optimizer** is a high-precision, client-side financial calibration engine designed to help employees max out their annual IRS elective deferral limits without forfeiting per-paycheck company match under non-true-up employer plans.
+
+*   🚀 **[Getting Started](/wiki/401k/getting-started/)**: Parameter setup, IRS federal limits, SECURE 2.0 catch-ups, and running calibrations.
+*   ⚙️ **[Core Mathematical Concepts](/wiki/401k/core-concepts/)**: Match forfeiture mechanics, the 4-Phase Strategy, and zero-shortfall whole-integer step-up math.
+*   🧠 **[Features & Strategy Options](/wiki/401k/features-strategies/)**: Option 1 Match Protector vs Option 2 Exact Decimal Glide, Custom Pace benchmarks, and JSON export/import.
+*   🔍 **[Troubleshooting & FAQ](/wiki/401k/troubleshooting-faq/)**: Handling mid-year raises, bonus timing windows, true-up rules, and data privacy.
+
+---
+
 ## ✉️ Support & Inquiries
 For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
 *   **QuickCatch Inquiries**: contact **quickcatch [at] trinhism.com** or join the [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for discussions and support.
-*   **FinanceWidget Inquiries**: **support [at] trinhism.com**
+*   **FinanceWidget & 401(k) Optimizer Inquiries**: **support [at] trinhism.com**
 
