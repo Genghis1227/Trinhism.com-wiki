@@ -35,7 +35,10 @@ Standard 401(k) calculators only divide your annual limit by your salary and ign
 *   🚀 **[Getting Started](/wiki/401k/getting-started/)**: Overview of inputs, setting up your salary, employer match formula, bonus withholding, and running your first calibration.
 *   ⚙️ **[Core Mathematical Concepts](/wiki/401k/core-concepts/)**: The 4-Phase Strategy, match forfeiture risks under non-true-up plans, whole-integer rounding math, and SECURE 2.0 catch-up limits.
 *   🧠 **[Features & Strategy Options](/wiki/401k/features-strategies/)**: Comparing Option 1 (Match Protector) vs Option 2 (Exact Glide), Custom Pace benchmark comparisons, and JSON backup workflows.
-*   🔍 **[Troubleshooting & FAQ](/wiki/401k/troubleshooting-faq/)**: Common questions on why your last check varies, handling mid-year adjustments, and true-up rules.
+---
+
+## ⚖️ Important Financial Disclaimer
+The 401(k) Max & Bonus Calibration Engine and its associated documentation are provided strictly for **educational and informational modeling purposes only** and do not constitute official financial, investment, tax, or legal advice. Pacing calculations are estimates based on standard payroll conventions. Plan provisions, true-up schedules, and tax implications vary by employer. Always consult a certified financial planner (CFP®), CPA, or your employer's plan administrator before making changes to your retirement elections.
 
 ---
 
