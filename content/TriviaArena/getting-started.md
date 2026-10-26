@@ -26,7 +26,7 @@ Trivia Arena requires no installation, software downloads, or user accounts.
 In the left column of the Setup Lobby, configure your competing teams:
 
 1. **Add / Remove Teams**: Trivia Arena supports between **2 and 6 competing teams**. Click **+ Add Team** or the trash icon to adjust the roster.
-2. **Assign Team Names**: Enter creative names (e.g., *"Quiztopher Walken"*, *"The Smartinis"*, *"Ctrl+Alt+Defeat"*).
+2. **Assign Team Names**: Enter creative names (e.g., *"Cyber Punks"*, *"Quantum Quizzers"*, *"Neon Rogues"*).
 3. **Select Team Colors**: Each team is assigned a distinctive high-visibility neon accent:
    * 🟦 **Cyan**
    * 🟥 **Rose**
@@ -54,13 +54,15 @@ Under **Game Mode & Pacing**, choose between two formats:
 
 Trivia Arena gives you complete flexibility over where questions come from:
 
-1. **Default Offline Deck (Built-in)**:
-   * Pre-packaged with **36 verified, multi-category trivia questions**.
-   * Completely offline ready. Ideal when internet connectivity is spotty or when you want to jump right in.
-2. **Custom AI Categories**:
-   * If you configure an AI API key (see [AI Provider Setup](/wiki/triviaarena/ai-providers/)), you can type in any custom topics you want!
-   * *Examples*: *"80s Action Cinema"*, *"World Capitals & Geography"*, *"Computer Science Trivia"*, *"Gordon Ramsay & Fine Dining"*.
-   * Toggle between presets (Pop Culture, Science & Nature, History, Gaming) or define your own.
+1. **Automatic Live AI Generation (Google Gemini)**:
+   * **No setup or API key required!** Trivia Arena automatically connects to **Trinhism Cloud AI** powered by **Google Gemini** to synthesize fresh questions on demand.
+   * You can type in any custom topics you want! *Examples*: *"80s Action Cinema"*, *"World Capitals & Geography"*, *"Texas BBQ"*, *"Microbrew Styles"*, or *"Star Wars Lore"*.
+   * Toggle between curated category packs (Default Matrix, Family & Kids Pack) or use the suggestion chips to build your custom board.
+2. **Extensive Offline Deck (300+ Verified Questions)**:
+   * Pre-packaged with **over 300 hand-verified trivia questions** across multiple categories and difficulty tiers.
+   * Completely offline ready. Ideal when internet connectivity is spotty, when running fully offline, or when you want instantaneous tile reveals with zero network roundtrips.
+3. **Power User BYOK (Bring Your Own Key)**:
+   * Prefer using Groq Cloud (Llama 3), OpenAI (GPT-4o), OpenRouter, or a local Ollama model? You can switch to the **Power User (BYOK)** tab in the AI drawer at any time.
 
 ---
 

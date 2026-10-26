@@ -63,11 +63,11 @@ Use the sidebar navigation or the quick links below to explore the documentation
 ---
 
 ## 🎮 Trivia Arena
-**Trivia Arena** is a premium, broadcast-grade, self-contained Trivia Gameshow Arena for living-room TV casting, corporate events, and competitive game nights. Runs completely client-side with an offline question deck, dynamic game duration estimator, and optional live AI question generation.
+**Trivia Arena** is a premium, broadcast-grade, self-contained Trivia Gameshow Arena for living-room TV casting, corporate events, and competitive game nights. Live questions are generated automatically via Trinhism Cloud AI powered by **Google Gemini** (no API key required), backed by an extensive **300+ question verified offline deck** and a dynamic game duration estimator.
 
 *   🚀 **[Getting Started](/wiki/triviaarena/getting-started/)**: Setup walkthrough, configuring 2–6 team rosters, selecting board modes (Jeopardy Grid vs Gauntlet), and calibrating match duration.
 *   🧠 **[Gameplay Mechanics & Host Guide](/wiki/triviaarena/gameplay-mechanics/)**: Board selection, turn countdowns, the 50% steal mechanic, streak multipliers, synthesized Web Audio FX, keyboard hotkeys, and podium analytics.
-*   🤖 **[AI Provider Setup & Prompting](/wiki/triviaarena/ai-providers/)**: Configuring Google Gemini (free tier), Groq Cloud (blazing fast Llama 3.1), OpenAI, OpenRouter, and local Ollama, plus custom category prompting.
+*   🤖 **[AI Integration & Architecture](/wiki/triviaarena/ai-providers/)**: How Trinhism Cloud AI automatically powers Gemini out of the box, the 300+ question offline deck, and optional BYOK key setup (Groq, OpenAI, Ollama).
 
 ---
 

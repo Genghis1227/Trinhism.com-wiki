@@ -22,8 +22,9 @@ Crucially, Trivia Arena operates on a **100% Client-Side / Zero Database Archite
 
 Most web-based trivia tools are either locked behind monthly subscriptions, require every player to install a dedicated mobile app, or feature stale static question decks. Trivia Arena offers:
 
-*   ⚡ **Offline-Ready Deck (Zero API Keys Needed)**: Includes a built-in offline deck of **36 verified trivia questions** across multiple difficulties. You can launch a match instantly with zero configuration or keys.
-*   🤖 **Infinite Custom AI Questions**: Connect your free or paid AI API keys (Google Gemini, Groq Cloud, OpenAI, OpenRouter, or local Ollama) to generate unlimited, fresh questions tailored to niche custom topics (e.g., *"90s Grunge Rock"*, *"Texas Craft Breweries"*, *"Cyberpunk Sci-Fi"*).
+*   🤖 **Automatically Provided Google Gemini AI**: Live, infinite trivia question generation is powered automatically out-of-the-box via Trinhism's dedicated Cloud AI backend (`/api/trivia` on Cloudflare Pages) using **Google Gemini**. **No API key, signup, or configuration is required**—it works instantly for all players 100% free!
+*   ⚡ **Extensive Offline Deck (300+ Verified Questions)**: Includes a built-in offline bank of **over 300 verified trivia questions** spanning tech history, pop culture, cinema, world geography, culinary arts, science, and family/kids packs. You can launch full matches without an internet connection or external API dependency.
+*   🛠️ **Power User BYOK (Bring Your Own Key)**: While Gemini is automatically provided for free, power users can optionally connect their own keys for alternative models, including **Groq Cloud** (blazing fast Llama 3), **OpenAI** (GPT-4o-mini), **OpenRouter**, or self-hosted local **Ollama** instances.
 *   ⏱️ **Dynamic Game Duration Estimator**: Never run out of time at a game night. As you adjust team counts, questions per round, turn timers, and steal windows, the engine calculates and displays the exact projected match duration in real-time.
 *   👥 **Multi-Team Turn Rotations**: Supports up to 6 custom teams with distinct neon color themes (Cyan, Rose, Amber, Emerald, Violet, Orange), active streak trackers, and buzzer reflex records.
 *   🎯 **50% Steal Mechanic**: If the active team misses a question, an urgent Steal Window opens for opposing teams to steal half the points, keeping all players engaged on every turn.
@@ -37,7 +38,7 @@ Most web-based trivia tools are either locked behind monthly subscriptions, requ
 
 *   🚀 **[Getting Started](/wiki/triviaarena/getting-started/)**: Accessing the arena, team configuration, board modes (Jeopardy Grid vs Gauntlet), duration calibration, and TV casting setup.
 *   🧠 **[Gameplay Mechanics & Features](/wiki/triviaarena/gameplay-mechanics/)**: Board selection, countdown timers, the 50% steal window, streak multipliers, keyboard controls, audio engine, and end-of-game podium awards.
-*   🤖 **[AI Provider Setup & Prompting](/wiki/triviaarena/ai-providers/)**: How to configure Google Gemini (free tier), Groq Cloud (blazing fast Llama 3.1), OpenAI, OpenRouter, and local Ollama, plus custom category prompting.
+*   🤖 **[AI Provider Setup & Prompting](/wiki/triviaarena/ai-providers/)**: How Trinhism Cloud AI automatically powers Gemini, plus instructions for BYOK providers (Groq, OpenAI, Ollama) and custom category prompting.
 
 ---
 
