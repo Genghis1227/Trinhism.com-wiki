@@ -71,6 +71,19 @@ Use the sidebar navigation or the quick links below to explore the documentation
 
 ---
 
+<p align="center">
+  <img src="/wiki/images/where-to-eat-logo.png" alt="Where to Eat Logo" width="100" />
+</p>
+
+## Where to Eat (`eat.trinhism.com`)
+**Where to Eat** is a mobile-first Progressive Web App (PWA) food roulette designed to cure dining indecision. Powered by Google Places (New) API with a zero-cost basic-tier field masking architecture, physical device shake detection, slot-reel cycling, and instant turn-by-turn navigation deep links.
+
+*   🚀 **[Getting Started](/wiki/wheretoeat/getting-started/)**: PWA home screen installation, GPS vs manual location overrides, 17 cuisine filters, and spinning via touch, shake, or Spacebar.
+*   🧠 **[Features & Roulette Mechanics](/wiki/wheretoeat/features-mechanics/)**: Slot-reel candidate cycling, session anti-repeat memory, accelerometer shake detection, food truck classification heuristics, and deep links.
+*   ⚙️ **[Architecture & Google Places API](/wiki/wheretoeat/architecture-api/)**: Zero-cost field masking, Google Places (New) dynamic SDK loading, Table A type mapping, Service Worker offline caching, and Cloudflare Pages deployment.
+
+---
+
 ## ✉️ Support & Inquiries
 For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
 *   **QuickCatch Inquiries**: contact **quickcatch [at] trinhism.com** or join the [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for discussions and support.
