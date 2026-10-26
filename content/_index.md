@@ -5,7 +5,7 @@ type = "docdock"
 
 # Trinhism Wiki Hub
 
-Welcome to the central documentation hub for **Trinhism** software applications. This wiki contains comprehensive technical specifications, setup workflows, and operational guides designed to help you integrate and manage your local financial tools.
+Welcome to the central documentation hub for **Trinhism** software applications. This wiki contains comprehensive technical specifications, setup workflows, and operational guides designed to help you configure, integrate, and master your financial utilities, lifestyle platforms, and interactive applications.
 
 Use the sidebar navigation or the quick links below to explore the documentation.
 
@@ -49,8 +49,29 @@ Use the sidebar navigation or the quick links below to explore the documentation
 
 ---
 
+<p align="center">
+  <img src="/wiki/images/curatedlists-logo.png" alt="CuratedLists Logo" width="100" />
+</p>
+
+## CuratedLists
+**CuratedLists** is an opinionated, high-performance web platform designed for connoisseurs to methodically evaluate, rank, and archive artisanal items—from specialty coffee and single-malt whiskies to craft hot sauces, wines, and EDC gear.
+
+*   🚀 **[Getting Started](/wiki/curatedlists/getting-started/)**: Account setup, vanity handles (`@username`), choosing roster archetypes (Curated Showcases vs Ranked Tier Boards), and item ingestion.
+*   🧠 **[Features & Sensory Capabilities](/wiki/curatedlists/features-rosters/)**: Sensory spider radar geometry, real-time collaborative blind tasting rooms, crowdsourced community commons, barcode scanner, and URL scrapers.
+*   ⚙️ **[Architecture & Technology Stack](/wiki/curatedlists/architecture-tech/)**: Next.js 15 App Router, React 19, Cloudflare Pages Edge Runtime, Supabase PostgreSQL, Upstash Redis caching, and Tailwind CSS 4 dual themes.
+
+---
+
+## 🎮 Trivia Arena
+**Trivia Arena** is a premium, broadcast-grade, self-contained Trivia Gameshow Arena for living-room TV casting, corporate events, and competitive game nights. Runs completely client-side with an offline question deck, dynamic game duration estimator, and optional live AI question generation.
+
+*   🚀 **[Getting Started](/wiki/triviaarena/getting-started/)**: Setup walkthrough, configuring 2–6 team rosters, selecting board modes (Jeopardy Grid vs Gauntlet), and calibrating match duration.
+*   🧠 **[Gameplay Mechanics & Host Guide](/wiki/triviaarena/gameplay-mechanics/)**: Board selection, turn countdowns, the 50% steal mechanic, streak multipliers, synthesized Web Audio FX, keyboard hotkeys, and podium analytics.
+*   🤖 **[AI Provider Setup & Prompting](/wiki/triviaarena/ai-providers/)**: Configuring Google Gemini (free tier), Groq Cloud (blazing fast Llama 3.1), OpenAI, OpenRouter, and local Ollama, plus custom category prompting.
+
+---
+
 ## ✉️ Support & Inquiries
 For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
 *   **QuickCatch Inquiries**: contact **quickcatch [at] trinhism.com** or join the [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for discussions and support.
-*   **FinanceWidget & 401(k) Optimizer Inquiries**: **support [at] trinhism.com**
-
+*   **General Support & Inquiries**: **support [at] trinhism.com**
