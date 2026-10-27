@@ -27,21 +27,28 @@ Crucially, the application is engineered with a **Zero-Cost API Architecture**: 
 Browsing generic review platforms often leads to decision fatigue, endless scrolling, sponsored promotions, and analysis paralysis. `eat.trinhism.com` offers:
 
 *   🎰 **Instant Food Roulette Engine**: Rapid slot-reel animation cycles through nearby contender spots before locking onto a winner. Features session memory to ensure you never get recommended the same place twice until all candidates are exhausted.
+*   🧭 **Spatial Quadrant Search (80–150+ Candidates)**: Breaks Google's default 20-place ceiling by querying the 5-mile center circle by both `POPULARITY` and `DISTANCE` alongside 4 N/S/E/W quadrant sub-circles in parallel, uncovering hidden gems across all surrounding neighborhoods.
 *   📳 **Physical Shake Detection**: Shake your smartphone to spin! Uses native `devicemotion` accelerometer detection with multi-axis delta sensitivity and a 2-second debounce timer, complete with iOS Safari motion permission handling.
 *   ⌨️ **Desktop Spacebar Trigger**: Sitting at your computer? Tap the Spacebar to trigger an instant spin.
-*   🗺️ **Zero-Cost Google Places Integration**: Exclusively requests Basic Tier fields (`displayName`, `location`, `id`, `formattedAddress`, `types`). Avoids costly API charges for hours, ratings, and price levels by routing users to free native Google Maps pages.
-*   🍽️ **17 Curated Cuisine Categories**: Filter by specific cravings (Burgers, Tacos/Mexican, Pizza, BBQ, Asian, Sushi, Thai, Pho/Vietnamese, Mediterranean, Italian, Seafood, Brunch, Coffee & Bakery, Deli, Wings, Sweets) or spin across all open culinary categories.
+*   🍽️ **18 Responsive Cuisine Categories**: Filter by auto-flex chips (`🎲 Any`, `🥩 Steakhouse`, `🍝 Italian`, `🍕 Pizza`, `🥢 Asian`, `🍔 Burgers`, `🍳 Diner`, `🍣 Sushi`, `🌮 Latin`, `🥙 Mediterranean`, `🍖 BBQ`, `🥞 Breakfast`, `🥪 American`, `🍺 Bar`, `🍷 Fine Dining`, `🍟 Fast Food`, `🦞 Seafood`, `🥗 Healthy`).
+*   🥢 **Hierarchical Sub-Category Drawers & Multi-Select**: Tap umbrella cuisines to slide out regional sub-cuisine drawers with full multi-select capability:
+    *   **Asian**: Vietnamese, Korean, Japanese, Ramen, Chinese, Thai, Indian.
+    *   **Mediterranean**: Halal, Greek, Middle Eastern, Lebanese, Turkish.
+    *   **Latin**: Mexican, Brazilian, Spanish.
+    *   **Breakfast**: Diner & Brunch, Crepes & Waffles, Bakery, Coffee & Cafe.
+*   ⚖️ **Balanced Equal-Odds Cuisine Selection**: When multi-selecting categories, the engine balances selection odds equally across chosen categories (1/N odds), preventing high-density cuisines from dominating the wheel.
 *   🚚 **Heuristic Establishment Badges**: Automatically classifies winning spots as either `🚚 Food Truck / Stand` or `🍽️ Dine-In / Restaurant` based on Google Places types and name heuristics.
 *   🚗 **1-Tap Navigation & Social Sharing**: Direct deep links to Google Maps Turn-by-Turn GPS Navigation (`Let's Go`), place overview (`View Details`), and native mobile sharing (`navigator.share()`).
-*   📱 **Offline-Ready PWA**: Fully installable as an app on iOS and Android with custom maskable launcher icons and service worker shell caching.
+*   💜 **Support Drawer & Trinhism Labs Showcase**: Collapsible support panel with scannable Venmo, PayPal, and Zelle donation QR codes, plus links to companion apps from Trinhism Labs.
+*   📱 **Offline-Ready PWA**: Fully installable as an app on iOS and Android with custom maskable launcher icons, service worker shell caching, and an in-app changelog modal.
 
 ---
 
 ## 📚 Documentation Sections
 
-*   🚀 **[Getting Started](/wiki/wheretoeat/getting-started/)**: Installing the PWA, location permissions, setting manual address overrides, cuisine filtering, and spinning via touch, shake, or Spacebar.
-*   🧠 **[Features & Roulette Mechanics](/wiki/wheretoeat/features-mechanics/)**: Slot-reel animation, accelerometer shake algorithms, session history tracking, food truck badge heuristics, and native Google Maps deep links.
-*   ⚙️ **[Architecture & Google Places API](/wiki/wheretoeat/architecture-api/)**: Zero-cost field masking strategy, Google Places (New) dynamic SDK loading, Table A type mapping, Service Worker offline caching, and Cloudflare Pages deployment.
+*   🚀 **[Getting Started](/wiki/wheretoeat/getting-started/)**: Installing the PWA, location permissions, setting manual address overrides, cuisine filtering, sub-category drawers, and spinning via touch, shake, or Spacebar.
+*   🧠 **[Features & Roulette Mechanics](/wiki/wheretoeat/features-mechanics/)**: Slot-reel animation, spatial quadrant search, session history tracking, balanced category selection, food truck heuristics, and native Google Maps deep links.
+*   ⚙️ **[Architecture & Google Places API](/wiki/wheretoeat/architecture-api/)**: Zero-cost field masking strategy, Google Places (New) dual-ranking & quadrant queries, suburban query widening, Table A type mapping, Service Worker offline caching, and Cloudflare Pages deployment.
 
 ---
 
