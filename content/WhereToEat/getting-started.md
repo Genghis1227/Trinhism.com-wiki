@@ -5,7 +5,7 @@ weight = 10
 
 # Getting Started with `eat.trinhism.com`
 
-This guide covers accessing the app, installing it as a mobile PWA, managing location permissions, setting search overrides, and spinning the roulette.
+This guide covers accessing the app, installing it as a mobile PWA, managing location permissions, setting search overrides, filtering by cuisines and regional sub-categories, and spinning the roulette.
 
 ---
 
@@ -30,7 +30,7 @@ The roulette engine searches a fixed **5-mile radius (8,046 meters)** around you
 ### GPS Auto-Detection (Default)
 * When prompted by your browser, tap **Allow** to grant location access.
 * The app initiates a high-accuracy GPS fix (`{ enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }`).
-* Your approximate street address or neighborhood is resolved and displayed at the top of the interface.
+* Your approximate street address or neighborhood is resolved and displayed at the top of the interface (e.g., *"Austin, TX"* or *"Pflugerville, TX"*).
 
 ### Manual Address / City Override
 Planning ahead for dinner across town or traveling to another city?
@@ -43,27 +43,67 @@ Planning ahead for dinner across town or traveling to another city?
 
 ## 3. Selecting Cuisine Categories
 
-Below the location display, you will find 17 curated cuisine chips:
+Below the location display, you will find 18 responsive auto-flex cuisine chips:
 
-* **All Cuisines (Default)**: If no chips are selected, the roulette searches across all nearby restaurants and food establishments.
-* **Filtering by Craving**: Tap one or more cuisine chips to narrow your candidates:
-  * 🍔 **Burgers**
-  * 🍕 **Pizza**
-  * 🌮 **Tacos / Mexican**
-  * 🍖 **BBQ**
-  * 🍜 **Asian / Noodles**
-  * 🍣 **Sushi / Japanese**
-  * 🍲 **Thai**
-  * 🥣 **Pho / Vietnamese**
-  * 🫓 **Mediterranean**
+* **🎲 Any (Default)**: Searches across all dining establishments (excluding fast food, coffee shops, bakeries, and bars) with a balanced multi-cuisine query.
+* **Filtering by Craving**: Tap one or more chips to focus your candidates:
+  * 🥩 **Steakhouse**
   * 🍝 **Italian**
+  * 🍕 **Pizza**
+  * 🥢 **Asian ▾**
+  * 🍔 **Burgers**
+  * 🍳 **Diner**
+  * 🍣 **Sushi**
+  * 🌮 **Latin ▾**
+  * 🥙 **Mediterranean ▾**
+  * 🍖 **BBQ**
+  * 🥞 **Breakfast ▾**
+  * 🥪 **American**
+  * 🍺 **Bar**
+  * 🍷 **Fine Dining**
+  * 🍟 **Fast Food**
   * 🦞 **Seafood**
-  * 🥞 **Breakfast & Brunch**
-  * ☕ **Coffee & Bakery**
-  * 🥪 **Sandwiches & Deli**
-  * 🍗 **Wings**
-  * 🍦 **Desserts / Sweets**
-* To clear all selections, tap **Clear Filters**.
+  * 🥗 **Healthy**
+
+---
+
+## 3.1. Hierarchical Sub-Categories & Multi-Select
+
+Categories marked with a dropdown arrow (`▾`) feature an interactive, animated **Sub-Category Drawer** allowing you to filter down to specific regional culinary styles:
+
+### 🥢 Asian Sub-Categories
+* **🥢 All Asian**: Searches all regional Asian styles.
+* **🍜 Vietnamese**: Specifically targets pho, banh mi, vermicelli, and Vietnamese kitchens.
+* **🥩 Korean**: Specifically targets Korean BBQ, bulgogi, kimchi, and bibimbap.
+* **🍱 Japanese**: Specifically targets izakaya, teriyaki, udon, and Japanese fare.
+* **🍜 Ramen**: Specifically targets dedicated ramen shops and noodle bars.
+* **🥟 Chinese**: Specifically targets dim sum, dumplings, and Szechuan/Cantonese spots.
+* **🍛 Thai**: Specifically targets pad thai, curries, and tom yum.
+* **🥘 Indian**: Specifically targets tandoori, curries, naan, and biryani.
+
+### 🥙 Mediterranean Sub-Categories
+* **🥙 All Med**: Searches all Mediterranean, Greek, and Levantine spots.
+* **🌙 Halal**: Specifically targets halal-certified kitchens, shawarma, gyros, and kebabs.
+* **🇬🇷 Greek**: Specifically targets souvlaki, gyros, spanakopita, and Greek tavernas.
+* **🧆 Middle Eastern**: Specifically targets falafel, shawarma, hummus, and tabbouleh.
+* **🇱🇧 Lebanese**: Specifically targets Lebanese grills, kafta, and mezza.
+* **🍢 Turkish**: Specifically targets doner, kebabs, pide, and Turkish delights.
+
+### 🌮 Latin Sub-Categories
+* **🌮 All Latin**: Searches all Latin, Mexican, Brazilian, and Spanish kitchens.
+* **🌮 Mexican**: Specifically targets taquerias, burritos, and enchiladas.
+* **🥩 Brazilian**: Specifically targets churrascarias and picanha steakhouses.
+* **🥘 Spanish**: Specifically targets tapas, paella, and Iberian fare.
+
+### 🥞 Breakfast Sub-Categories
+* **🥞 All Breakfast**: Searches all breakfast and brunch spots.
+* **🍳 Diner & Brunch**: Specifically targets classic breakfast diners, benedicts, and omelets.
+* **🥞 Crepes & Waffles**: Specifically targets creperies, waffle houses, and croffles.
+* **🥐 Bakery**: Specifically targets artisan bakeries, bagels, pastries, and donuts.
+* **☕ Coffee & Cafe**: Specifically targets espresso bars, cafes, and coffee shops.
+
+### Multi-Select Capability
+You can select and combine multiple sub-categories within an umbrella cuisine (e.g., selecting both **Vietnamese + Ramen**, or **Greek + Halal**). The parent chip updates dynamically to display your active selections (e.g. `🥢 Asian (Viet., Ramen)`), and the candidate pool filters strictly to places matching your selected criteria.
 
 ---
 
@@ -71,9 +111,18 @@ Below the location display, you will find 17 curated cuisine chips:
 
 You have three ways to trigger the spin:
 
-1. **Tap the Big Spin Button**: Tap the large glowing **🎰 Spin the Wheel** button.
+1. **Tap the Big Spin Button**: Tap the glowing **🎰 Shake or Tap to Spin** button.
 2. **Shake Your Phone**: Give your mobile phone a firm shake! The built-in accelerometer detects the motion and initiates the spin automatically.
-   * *iOS Note*: On iOS devices, motion permissions require a single user tap anywhere on the screen before sensor events are received.
+   * *iOS Note*: On iOS devices, tapping anywhere on the screen (such as selecting a chip or the shake status pill) activates sensor permissions.
 3. **Desktop Spacebar**: If you are using a laptop or desktop computer, simply press the **Spacebar** on your keyboard.
 
-The wheel will rapidly cycle through candidates before locking onto a winner, displaying the restaurant name, establishment badge, formatted address, and interactive map.
+The wheel will rapidly cycle through candidates before locking onto a winner, displaying the restaurant name, establishment badge, formatted address, distance from your coordinates, and an interactive dark map.
+
+---
+
+## 5. Support & Feedback Panel
+
+At the bottom of the interface, the collapsible **💜 Enjoying Where to eat?** panel offers:
+* **Direct Support QR Codes**: Scannable QR codes and links for Venmo (`@TonyLTrinh`), PayPal (`paypal.me/Genghis1227`), and Zelle.
+* **Trinhism Labs Showcase**: Companion web apps including QuickCatch, FinanceWidget, 401(k) Optimizer, Tournament Director, Cash Game Director, and CuratedLists.
+* **Support & Feedback Contact**: Direct email support at **support [at] trinhism.com** and documentation links to the [Trinhism Wiki](https://trinhism.com/wiki/wheretoeat/).
