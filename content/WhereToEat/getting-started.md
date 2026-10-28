@@ -19,13 +19,21 @@ This guide covers accessing the app, installing it as a mobile PWA, managing loc
    * **Android (Chrome)**: Tap the browser menu (`⋮`) or the prompt banner and select **Install App** or **Add to Home Screen**.
    * **Desktop (Chrome/Edge)**: Click the install icon in the URL address bar to install it as a standalone borderless window.
 
-Once installed, the app launches full-screen with custom maskable launcher icons and no browser address bar chrome.
+Once installed, the app launches full-screen with dedicated splash screen emblems, 80% safe-zone calibrated maskable launcher icons, and no browser address bar chrome. The app proactively checks for service worker and asset updates both on initial launch and whenever you resume the app from the background.
 
 ---
 
-## 2. Location & Search Radius
+## 2. Location & Configurable Search Radius
 
-The roulette engine searches a fixed **5-mile radius (8,046 meters)** around your active coordinates:
+The roulette engine searches your surroundings with a default **5-mile radius (8,046 meters)** that can be easily expanded up to **15 miles**:
+
+### 📏 Selecting Your Search Radius (5 mi / 10 mi / 15 mi)
+1. Tap the **📍 Current Location** bar at the top of the app to expand the location drawer.
+2. In the bottom row, locate the **Radius** segmented pill group:
+   * **5 mi (Default)**: Ideal for dense urban neighborhoods, downtown dining, and immediate neighborhood spots.
+   * **10 mi**: Quadruples geographic coverage; recommended for suburban areas (e.g., Pflugerville, Round Rock, Buda) to pull in downtown dining rooms and neighboring town centers.
+   * **15 mi**: Expands coverage across entire metropolitan regions, surfacing 200–300% more candidates for niche cravings.
+3. The location bar header automatically updates its subtext (e.g., `GPS: Pflugerville, TX • 10 mi`) and remembers your chosen radius in your device's `localStorage`.
 
 ### GPS Auto-Detection (Default)
 * When prompted by your browser, tap **Allow** to grant location access.

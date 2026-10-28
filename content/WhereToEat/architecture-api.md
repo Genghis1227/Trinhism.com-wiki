@@ -30,7 +30,7 @@ Google Cloud bills Places API requests based on tiered data categories. Requesti
 ```javascript
 // Strict Basic Tier Request Only
 const req = {
-  fields: ['displayName', 'location', 'id', 'formattedAddress', 'types', 'primaryType'],
+  fields: ['displayName', 'location', 'id', 'formattedAddress', 'types', 'primaryType', 'businessStatus'],
   locationRestriction: {
     center: { lat: region.lat, lng: region.lng },
     radius: region.radius
@@ -50,7 +50,8 @@ const { places } = await Place.searchNearby(req);
 ```
 
 ### Why This Matters:
-1. **Zero-Dollar Operation**: By fetching only Basic Tier fields (`displayName`, `location`, `id`, `formattedAddress`, `types`, `primaryType`), the app stays well within Google's free monthly credit allotment.
+1. **Zero-Dollar Operation (Pro SKU Free Tier)**: By restricting field masks to foundational attributes (`displayName`, `location`, `id`, `formattedAddress`, `types`, `primaryType`, and `businessStatus`), searches map to the **Nearby Search Pro SKU**. Google provides **5,000 completely free Pro requests every month**. Adding `businessStatus` incurs **$0 extra cost** because `displayName` already operates in the Pro tier, while strictly avoiding expensive Enterprise and Atmosphere tiers.
+2. **Operational Status Guarantee**: Non-operational listings (`CLOSED_PERMANENTLY` and `CLOSED_TEMPORARILY`) are filtered out client-side during place ingestion, preventing closed restaurants from entering the candidate pool.
 2. **No Data Deprecation Risk**: Secondary data like photos, operating hours, and user reviews are accessed for free by deep-linking users directly to the official Google Maps page (`https://www.google.com/maps/search/?api=1&query=...&query_place_id=...`).
 
 ---
@@ -59,16 +60,19 @@ const { places } = await Place.searchNearby(req);
 
 To break the 20-place ceiling without pagination, the app deploys a multi-region spatial query using `getSearchRegions()`:
 
-1. **Center 5-Mile Circle (`8,046.72 meters`)**:
+1. **Center Circle (`FULL_RADIUS`)**:
+   - `FULL_RADIUS = radiusMiles * 1,609.344 meters` (8.05 km for 5 mi, 16.09 km for 10 mi, 24.14 km for 15 mi).
    - Query 1: `rankPreference: SearchNearbyRankPreference.POPULARITY` (top 20 most popular spots).
    - Query 2: `rankPreference: SearchNearbyRankPreference.DISTANCE` (top 20 closest spots to the pin).
-2. **Four Offset Quadrants (`4,500 meters` radius each)**:
-   - **North**: Offset `+0.032° lat` (~2.2 miles North).
-   - **South**: Offset `-0.032° lat` (~2.2 miles South).
-   - **East**: Offset `+0.037° lng` (~2.2 miles East).
-   - **West**: Offset `-0.037° lng` (~2.2 miles West).
-   - Because `2.2 miles offset + 2.8 miles radius = 5.0 miles`, every quadrant sub-circle remains 100% inside the 5-mile search boundary.
-3. **De-duplication & Haversine Distance Check**: Results across all regions are deduplicated by `place.id` and verified against the user's active coordinates with `calculateDistanceMiles() <= 5.15`.
+2. **Four Offset Quadrants (`QUAD_RADIUS`)**:
+   - `QUAD_RADIUS = FULL_RADIUS * 0.56` (56% radius for sub-circles).
+   - `offsetMiles = radiusMiles * 0.44` (44% offset North/South/East/West).
+   - **North**: `lat + (offsetMiles * 0.0145°)`.
+   - **South**: `lat - (offsetMiles * 0.0145°)`.
+   - **East**: `lng + (offsetMiles * 0.0145° / cos(lat))`.
+   - **West**: `lng - (offsetMiles * 0.0145° / cos(lat))`.
+   - Because `0.44 offset + 0.56 radius = 1.0`, each quadrant sub-circle remains strictly inside the search boundary.
+3. **De-duplication & Haversine Distance Check**: Results across all regions are deduplicated by `place.id` and verified against active coordinates with `calculateDistanceMiles() <= radiusMiles + 0.25`.
 4. **Candidate Depth**: Returns **80 to 150+ unique establishments** per spin cycle.
 
 ---
@@ -106,6 +110,21 @@ if (places.length === 0 && !state.selectedCategoryIds.has('any')) {
 }
 ```
 Client-side keyword matching then evaluates the candidate names (matching keywords like *Pho*, *Banh Mi*, *Saigon*, *Ramen*, etc.) to surface authentic local spots that would otherwise be missed.
+
+---
+
+## 📱 Service Worker & Active PWA Lifecycle
+
+`eat.trinhism.com` implements an active Progressive Web App lifecycle:
+
+1. **Proactive Background Update Checking**:
+   - **On Startup**: Executes `reg.update()` on page load to immediately verify if `sw.js` or static assets have changed.
+   - **On Foreground Resume**: Listens to `document.addEventListener('visibilitychange')`. Whenever the user switches back to the installed PWA, the service worker immediately checks for updates rather than waiting for 24-hour browser polling.
+2. **Automated Asset Synchronization**:
+   - Master badges (`assets/badge-round-text.jpg` and `assets/badge-round-clean.jpg`) are synchronized across all densities.
+   - **Website Logo (`logo.png`)**: 512x512 tightly cropped square around the phone and roulette wheel for crisp, high-contrast header presentation.
+   - **PWA Splash Screen (`icon-512.png`, `icon-192.png`)**: `purpose: any` featuring the full circular emblem with "WHERE TO EAT..." title on dark slate background.
+   - **Mobile Launcher (`icon-maskable-512.png`, `icon-maskable-192.png`, `apple-touch-icon.png`)**: `purpose: maskable` calibrated within the 80% safe zone to eliminate clipping across Android circular/squircle and iOS home screen masks.
 
 ---
 

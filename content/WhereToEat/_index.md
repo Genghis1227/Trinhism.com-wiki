@@ -16,9 +16,9 @@ Welcome to the **Where to Eat** (`eat.trinhism.com`) documentation space. "Where
 
 ## 💡 What is `eat.trinhism.com`?
 
-Hosted at [eat.trinhism.com](https://eat.trinhism.com), the app transforms the age-old question *"What do you want to eat?"* into an interactive, high-energy gameshow spin. Powered by the modern **Google Places (New) API** and native device sensors, it scans a 5-mile radius around your current location, filters by your chosen cuisine cravings, and rapidly cycles through real open spots before locking onto a winner.
+Hosted at [eat.trinhism.com](https://eat.trinhism.com), the app transforms the age-old question *"What do you want to eat?"* into an interactive, high-energy gameshow spin. Powered by the modern **Google Places (New) API** and native device sensors, it scans your local area across a configurable 5 to 15-mile radius, filters by your chosen cuisine cravings, excludes closed venues, and rapidly cycles through real operational spots before locking onto a winner.
 
-Crucially, the application is engineered with a **Zero-Cost API Architecture**: by strictly utilizing Google Places Basic Tier field masking, the app completely avoids expensive Advanced and Atmosphere billing while providing free deep-links into native Google Maps for live menus, photos, reviews, and turn-by-turn navigation.
+Crucially, the application is engineered with a **Zero-Cost API Architecture**: by strictly utilizing Google Places Pro Tier field masking (staying within the 5,000 free monthly request tier for place names and operational status), the app completely avoids expensive Enterprise/Atmosphere billing while providing free deep-links into native Google Maps for live menus, photos, reviews, and turn-by-turn navigation.
 
 ---
 
@@ -27,7 +27,9 @@ Crucially, the application is engineered with a **Zero-Cost API Architecture**: 
 Browsing generic review platforms often leads to decision fatigue, endless scrolling, sponsored promotions, and analysis paralysis. `eat.trinhism.com` offers:
 
 *   🎰 **Instant Food Roulette Engine**: Rapid slot-reel animation cycles through nearby contender spots before locking onto a winner. Features session memory to ensure you never get recommended the same place twice until all candidates are exhausted.
-*   🧭 **Spatial Quadrant Search (80–150+ Candidates)**: Breaks Google's default 20-place ceiling by querying the 5-mile center circle by both `POPULARITY` and `DISTANCE` alongside 4 N/S/E/W quadrant sub-circles in parallel, uncovering hidden gems across all surrounding neighborhoods.
+*   🧭 **Spatial Quadrant Search (80–150+ Candidates)**: Breaks Google's default 20-place ceiling by querying the center circle by both `POPULARITY` and `DISTANCE` alongside 4 N/S/E/W quadrant sub-circles in parallel, uncovering hidden gems across all surrounding neighborhoods.
+*   📏 **Configurable Search Radius (5 mi / 10 mi / 15 mi)**: Easily expand your search perimeter up to 15 miles with one tap. Expands geographic coverage up to 4x, surfacing 200–300% more candidate restaurants across neighboring towns and metro areas while remembering your preference.
+*   🟢 **Operational Status Filtering**: Automatically filters out venues marked `CLOSED_PERMANENTLY` or `CLOSED_TEMPORARILY` via Google Places `businessStatus`, guaranteeing that only currently open and active establishments enter the roulette wheel.
 *   📳 **Physical Shake Detection**: Shake your smartphone to spin! Uses native `devicemotion` accelerometer detection with multi-axis delta sensitivity and a 2-second debounce timer, complete with iOS Safari motion permission handling.
 *   ⌨️ **Desktop Spacebar Trigger**: Sitting at your computer? Tap the Spacebar to trigger an instant spin.
 *   🍽️ **18 Responsive Cuisine Categories**: Filter by auto-flex chips (`🎲 Any`, `🥩 Steakhouse`, `🍝 Italian`, `🍕 Pizza`, `🥢 Asian`, `🍔 Burgers`, `🍳 Diner`, `🍣 Sushi`, `🌮 Latin`, `🥙 Mediterranean`, `🍖 BBQ`, `🥞 Breakfast`, `🥪 American`, `🍺 Bar`, `🍷 Fine Dining`, `🍟 Fast Food`, `🦞 Seafood`, `🥗 Healthy`).
@@ -39,8 +41,8 @@ Browsing generic review platforms often leads to decision fatigue, endless scrol
 *   ⚖️ **Balanced Equal-Odds Cuisine Selection**: When multi-selecting categories, the engine balances selection odds equally across chosen categories (1/N odds), preventing high-density cuisines from dominating the wheel.
 *   🚚 **Heuristic Establishment Badges**: Automatically classifies winning spots as either `🚚 Food Truck / Stand` or `🍽️ Dine-In / Restaurant` based on Google Places types and name heuristics.
 *   🚗 **1-Tap Navigation & Social Sharing**: Direct deep links to Google Maps Turn-by-Turn GPS Navigation (`Let's Go`), place overview (`View Details`), and native mobile sharing (`navigator.share()`).
-*   💜 **Support Drawer & Trinhism Labs Showcase**: Collapsible support panel with scannable Venmo, PayPal, and Zelle donation QR codes, plus links to companion apps from Trinhism Labs.
-*   📱 **Offline-Ready PWA**: Fully installable as an app on iOS and Android with custom maskable launcher icons, service worker shell caching, and an in-app changelog modal.
+*   💜 **Support Drawer & Trinhism Labs Showcase**: Collapsible support panel with scannable Venmo, PayPal, and Zelle donation QR codes, plus links to companion apps across the [Trinhism Labs directory](https://trinhism.com/app/).
+*   📱 **Offline-Ready PWA & Active Updates**: Fully installable as an app on iOS and Android with dedicated splash screen emblems, 80% safe-zone calibrated maskable launcher icons, proactive background update checking on launch/resume, and an in-app changelog modal.
 
 ---
 
