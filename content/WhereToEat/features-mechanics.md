@@ -14,7 +14,7 @@ This document provides a deep dive into the food roulette engine, spatial quadra
 The core recommendation engine balances visual excitement with smart candidate caching and mathematical odds fairness:
 
 *   **Slot-Reel Animation**: When triggered, the result card enters a high-speed cycling state, flashing random candidate restaurant names and establishment icons with accelerating tick intervals before easing to a halt on the chosen winner.
-*   **Candidate Pre-Filtering**: The entire candidate pool is strictly pre-filtered against your active category and sub-category criteria before the roulette animation begins. If zero candidates match your selected criteria within 5 miles, a toast notification alerts you immediately without showing unrelated random spots.
+*   **Candidate Pre-Filtering & Operational Status**: The entire candidate pool is strictly pre-filtered against your active category, sub-category, and active search radius before spinning. Crucially, the engine inspects Google Places `businessStatus` (and legacy `business_status`), automatically discarding any venues marked `CLOSED_PERMANENTLY` or `CLOSED_TEMPORARILY` so only operational establishments compete. If zero candidates match your criteria within your selected radius, a toast notification alerts you immediately to try another category or widen the search radius.
 *   **Balanced Category Selection (`selectBalancedWinner`)**: When you multi-select multiple categories (e.g., *Steakhouse + Mexican + Asian*), the picker does not simply pick a random place from the entire pool (which would unfairly bias toward the category with the most nearby locations). Instead, it assigns **equal 1/N odds** to each selected category, picks a category at random, and then picks an unvisited restaurant within that category.
 *   **Session Anti-Repeat Memory**:
     *   The app tracks each spot recommended during your active session via an in-memory `Set`.
@@ -23,30 +23,34 @@ The core recommendation engine balances visual excitement with smart candidate c
 
 ---
 
-## 🧭 Spatial Quadrant Search Engine (80–150+ Candidates)
+## 🧭 Adaptive Spatial Quadrant Search Engine (80–150+ Candidates)
 
 Google's modern `Place.searchNearby` API imposes a hard ceiling of **20 results per request** without pagination support (`nextPageToken` is unsupported). In dense metropolitan areas or sprawling suburbs, a single search from a downtown pin causes the top 20 most popular downtown venues to crowd out every eatery in surrounding neighborhoods.
 
-To solve this, `eat.trinhism.com` implements a **Spatial Quadrant Search Engine**:
+To solve this, `eat.trinhism.com` implements an **Adaptive Spatial Quadrant Search Engine** that dynamically recalibrates its sub-circle geometry based on your active search radius (5, 10, or 15 miles):
 
 ```
                   [ North Quadrant ]
-                  lat +0.032°, r=4.5km
+               lat +offset, r=QUAD_RADIUS
                            ▲
                            │
 [ West Quadrant ]   ◄── [ Center ] ──►   [ East Quadrant ]
-lng -0.037°, r=4.5km   Pop + Dist       lng +0.037°, r=4.5km
-       5.0-mile radius (r=8.05km)
+lng -offset, r=QUAD    Pop + Dist       lng +offset, r=QUAD
+         Full radius (5 mi, 10 mi, or 15 mi)
                            │
                            ▼
                   [ South Quadrant ]
-                  lat -0.032°, r=4.5km
+               lat -offset, r=QUAD_RADIUS
 ```
 
 ### How It Works:
-1. **Dual-Ranking Center Circle**: Simultaneously queries the user's 5-mile radius by both `POPULARITY` (the 20 most famous spots) and `DISTANCE` (the 20 closest spots to the pin).
-2. **Four Spatial Quadrant Sub-Circles**: In parallel, queries 4 offset sub-circles shifted ~2.2 miles North, South, East, and West, each with a ~2.8-mile radius (`4,500 meters`). Because each sub-circle has its own top-20 cutoff, neighborhood restaurants 2 to 4 miles away (e.g., UT campus, East Austin, South Lamar, North Burnet) get full representation.
-3. **Strict 5-Mile Haversine Boundary**: All candidate places returned by quadrant queries are validated against the user's active coordinates via [`calculateDistanceMiles()`](#). Any spot beyond 5.15 miles is discarded.
+1. **Dual-Ranking Center Circle**: Simultaneously queries the user's full radius by both `POPULARITY` (the top 20 most famous spots) and `DISTANCE` (the 20 closest spots to the pin).
+2. **Four Adaptive Quadrant Sub-Circles**: In parallel, queries 4 offset sub-circles shifted North, South, East, and West. The geometry adapts dynamically to the chosen radius:
+   * **Full Radius (`FULL_RADIUS`)**: `radiusMiles * 1,609.344 meters` (8.05 km for 5 mi, 16.09 km for 10 mi, 24.14 km for 15 mi).
+   * **Quadrant Radius (`QUAD_RADIUS`)**: `FULL_RADIUS * 0.56` (2.8 mi for 5 mi, 5.6 mi for 10 mi, 8.4 mi for 15 mi).
+   * **Directional Offset**: `radiusMiles * 0.44` North/South and East/West.
+   Because `44% offset + 56% radius = 100%`, every quadrant sub-circle remains precisely tangent to the outer search perimeter without overflowing.
+3. **Dynamic Haversine Boundary Guard**: All candidate places returned by quadrant queries are validated against the user's active coordinates via [`calculateDistanceMiles()`](#). Any spot exceeding `radiusMiles + 0.25 miles` is discarded.
 4. **Result Pool**: Expands the candidate pool from 20 places to **80–150+ unique establishments** on a single spin with zero added API billing tier cost.
 
 ---
