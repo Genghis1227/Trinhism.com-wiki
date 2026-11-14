@@ -84,6 +84,20 @@ Use the sidebar navigation or the quick links below to explore the documentation
 
 ---
 
+<p align="center">
+  <img src="/wiki/images/ambiently-logo.png" alt="Ambiently Logo" width="100" />
+</p>
+
+## Ambiently (`dashboard.trinhism.com`)
+**Ambiently** is an open-source, self-hosted, offline-first smart display and family command center PWA built as a privacy-first alternative to commercial wall displays. Combine multi-canvas freeform corkboards, smart sticky notes, multi-iCal calendars, family chores & rewards, 7-day meal planning with recipe scraping, and multi-source photo slideshows across tablets, Docker servers, and Raspberry Pi kiosks.
+
+*   🚀 **[Getting Started](/wiki/ambiently/getting-started/)**: Instant PWA installation, multi-canvas corkboard navigation, household profiles, PIN security, OLED Night Mode, and 3-tier local/cloud backups.
+*   🧠 **[Widgets, Chores & Meal Planner](/wiki/ambiently/widgets-household/)**: Smart sticky notes, Google Photos/Plex/NAS photo frames, calendars, Readability RSS reader, family chore & reward ledger, meal planner, and Mobile Companion.
+*   🐳 **[Docker & Raspberry Pi Kiosk](/wiki/ambiently/docker-raspberry-pi/)**: Self-hosting the ~55 MB multi-arch (`amd64`/`arm64`) container on NAS/home servers and building an auto-booting Raspberry Pi 4/5 wall kiosk.
+*   ⚙️ **[Architecture & Tech Stack](/wiki/ambiently/architecture-tech/)**: Local-first Dexie.js IndexedDB stores, unified Cloudflare Edge & Node 22 proxy endpoints, SSRF protections, and 24/7 kiosk rendering optimizations.
+
+---
+
 ## ✉️ Support & Inquiries
 For technical support, reporting bug behaviors, or requesting feature whitelists, please reach out to the appropriate contact:
 *   **QuickCatch Inquiries**: contact **quickcatch [at] trinhism.com** or join the [QuickCatch Google Group](https://groups.google.com/g/quickcatch) for discussions and support.
